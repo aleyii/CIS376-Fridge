@@ -27,9 +27,9 @@ namespace CIS_376
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ManagerHome fo = new ManagerHome();
-            fo.Region = this.Region;
-            fo.Show();
+            Inventory inv = new Inventory();
+
+            inv.Show();
             this.Hide();
         }
 

@@ -10,32 +10,14 @@ using System.Windows.Forms;
 
 namespace CIS_376
 {
-    public partial class ManagerHome : Form
+    public partial class RemoveItem : Form
     {
-
-      
-        public ManagerHome()
+        public RemoveItem()
         {
             InitializeComponent();
-            label.Text = "Store Manager Homepage";// set text of label
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
         {
             Inventory inv = new Inventory();
             inv.Show();

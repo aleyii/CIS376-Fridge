@@ -74,6 +74,7 @@
             this.button3.TabIndex = 3;
             this.button3.Text = "Add Item";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -92,6 +93,7 @@
             this.button5.TabIndex = 5;
             this.button5.Text = "Remove Item";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Inventory
             // 

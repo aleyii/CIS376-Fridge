@@ -11,3 +11,17 @@ C:\Users\ahkra\Google Drive\Semester 6\CIS 376\Project\C#\CIS_376\CIS_376\obj\De
 C:\Users\ahkra\Google Drive\Semester 6\CIS 376\Project\C#\CIS_376\CIS_376\obj\Debug\CIS_376.ManagerHome.resources
 C:\Users\ahkra\Google Drive\Semester 6\CIS 376\Project\C#\CIS_376\CIS_376\obj\Debug\CIS_376.Inventory.resources
 C:\Users\ahkra\Google Drive\Semester 6\CIS 376\Project\C#\CIS_376\CIS_376\obj\Debug\CIS_376.Search.resources
+C:\Users\ahkra\Google Drive\Semester 6\CIS 376\Project\GIT\CIS376-Fridge\CIS_376\CIS_376\bin\Debug\CIS_376.exe.config
+C:\Users\ahkra\Google Drive\Semester 6\CIS 376\Project\GIT\CIS376-Fridge\CIS_376\CIS_376\bin\Debug\CIS_376.exe
+C:\Users\ahkra\Google Drive\Semester 6\CIS 376\Project\GIT\CIS376-Fridge\CIS_376\CIS_376\bin\Debug\CIS_376.pdb
+C:\Users\ahkra\Google Drive\Semester 6\CIS 376\Project\GIT\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.csprojResolveAssemblyReference.cache
+C:\Users\ahkra\Google Drive\Semester 6\CIS 376\Project\GIT\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.Inventory.resources
+C:\Users\ahkra\Google Drive\Semester 6\CIS 376\Project\GIT\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.ManagerHome.resources
+C:\Users\ahkra\Google Drive\Semester 6\CIS 376\Project\GIT\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.AddItem.resources
+C:\Users\ahkra\Google Drive\Semester 6\CIS 376\Project\GIT\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.Properties.Resources.resources
+C:\Users\ahkra\Google Drive\Semester 6\CIS 376\Project\GIT\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.Search.resources
+C:\Users\ahkra\Google Drive\Semester 6\CIS 376\Project\GIT\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.csproj.GenerateResource.cache
+C:\Users\ahkra\Google Drive\Semester 6\CIS 376\Project\GIT\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.csproj.CoreCompileInputs.cache
+C:\Users\ahkra\Google Drive\Semester 6\CIS 376\Project\GIT\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.exe
+C:\Users\ahkra\Google Drive\Semester 6\CIS 376\Project\GIT\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.pdb
+C:\Users\ahkra\Google Drive\Semester 6\CIS 376\Project\GIT\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.RemoveItem.resources

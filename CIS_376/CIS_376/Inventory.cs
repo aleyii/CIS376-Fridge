@@ -36,5 +36,19 @@ namespace CIS_376
             mh.Show();
             this.Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AddItem add = new AddItem();
+            add.Show();
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            RemoveItem rmv = new RemoveItem();
+            rmv.Show();
+            this.Hide();
+        }
     }
 }
