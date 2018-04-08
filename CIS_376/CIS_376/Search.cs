@@ -34,6 +34,7 @@ namespace CIS_376
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             inv.Show();
             this.Hide();
         }

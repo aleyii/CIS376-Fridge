@@ -12,7 +12,8 @@ namespace CIS_376
 {
     public partial class Inventory : Form
     {
-       
+        
+        ManagerHome mh = new ManagerHome();
         public Inventory()
         {
             InitializeComponent();
@@ -22,6 +23,17 @@ namespace CIS_376
         {
             Search srh = new Search();
             srh.Show();
+            this.Hide();
+        }
+
+        private void Inventory_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            mh.Show();
             this.Hide();
         }
     }
