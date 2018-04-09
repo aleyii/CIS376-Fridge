@@ -17,7 +17,7 @@ namespace CIS_376
         public AddItem()
         {
             InitializeComponent();
-            BackColor = Color.Orange;
+          
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -71,12 +71,11 @@ namespace CIS_376
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string path;
             OpenFileDialog file = new OpenFileDialog();
+            file.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
             if (file.ShowDialog() == DialogResult.OK)
             {
-                path = file.FileName;
-                textBox12.Text = path;
+                textBox12.Text = file.FileName; ;
             }
         }
 

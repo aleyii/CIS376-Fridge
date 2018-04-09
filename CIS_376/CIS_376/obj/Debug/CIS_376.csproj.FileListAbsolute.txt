@@ -25,3 +25,4 @@ C:\Users\ahkra\Google Drive\Semester 6\CIS 376\Project\GIT\CIS376-Fridge\CIS_376
 C:\Users\ahkra\Google Drive\Semester 6\CIS 376\Project\GIT\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.exe
 C:\Users\ahkra\Google Drive\Semester 6\CIS 376\Project\GIT\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.pdb
 C:\Users\ahkra\Google Drive\Semester 6\CIS 376\Project\GIT\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.RemoveItem.resources
+C:\Users\ahkra\Google Drive\Semester 6\CIS 376\Project\GIT\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.FridgeLayout.resources

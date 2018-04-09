@@ -15,6 +15,7 @@ namespace CIS_376
         public RemoveItem()
         {
             InitializeComponent();
+            tableLayoutPanel1.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -22,6 +23,13 @@ namespace CIS_376
             Inventory inv = new Inventory();
             inv.Show();
             this.Hide();
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+            DataTable table = new DataTable();
+            table.Columns.Add("ID",typeof(int));
+            table.Columns.Add("Item",typeof(String));
         }
     }
 }

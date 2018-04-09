@@ -22,7 +22,9 @@ namespace CIS_376
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            FridgeLayout fl = new FridgeLayout();
+            fl.Show();
+            this.Hide();
         }
 
         private void Form1_Load(object sender, EventArgs e)
