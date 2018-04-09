@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChangeItemQuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeItemQuan.Designer.cs">
+      <DependentUpon>ChangeItemQuan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FridgeLayout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     <Compile Include="Search.Designer.cs">
       <DependentUpon>Search.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ChangeItemQuan.resx">
+      <DependentUpon>ChangeItemQuan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FridgeLayout.resx">
       <DependentUpon>FridgeLayout.cs</DependentUpon>
     </EmbeddedResource>
