@@ -26,3 +26,21 @@ C:\Users\ahkra\Google Drive\Semester 6\CIS 376\Project\GIT\CIS376-Fridge\CIS_376
 C:\Users\ahkra\Google Drive\Semester 6\CIS 376\Project\GIT\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.pdb
 C:\Users\ahkra\Google Drive\Semester 6\CIS 376\Project\GIT\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.RemoveItem.resources
 C:\Users\ahkra\Google Drive\Semester 6\CIS 376\Project\GIT\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.FridgeLayout.resources
+C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\bin\Debug\CIS_376.exe.config
+C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\bin\Debug\CIS_376.exe
+C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\bin\Debug\CIS_376.pdb
+C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.csprojResolveAssemblyReference.cache
+C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.ChangeItemQuan.resources
+C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.FridgeLayout.resources
+C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.Inventory.resources
+C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.ManagerHome.resources
+C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.AddItem.resources
+C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.Properties.Resources.resources
+C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.RemoveItem.resources
+C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.Search.resources
+C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.csproj.GenerateResource.Cache
+C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.csproj.CoreCompileInputs.cache
+C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.exe
+C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.pdb
+C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\bin\Debug\FridgeDatabase.mdf
+C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\bin\Debug\FridgeDatabase_log.ldf
