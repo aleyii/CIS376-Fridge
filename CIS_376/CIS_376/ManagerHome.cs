@@ -17,7 +17,7 @@ namespace CIS_376
         public ManagerHome()
         {
             InitializeComponent();
-            label.Text = "Store Manager Homepage";// set text of label
+            HomePageLabel.Text = "Store Manager Homepage";// set text of label
         }
 
         private void button1_Click(object sender, EventArgs e)
