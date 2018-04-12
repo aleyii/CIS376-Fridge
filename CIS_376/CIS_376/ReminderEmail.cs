@@ -26,7 +26,7 @@ namespace CIS_376
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
 
                 mail.From = new MailAddress("facadefridge@gmail.com");
-                mail.To.Add("swack@umich.edu");
+                mail.To.Add("akrayem@umich.edu");
                 mail.Subject = "Test Mail";
                 mail.Body = "This is for testing SMTP mail from GMAIL";
 
