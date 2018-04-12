@@ -27,16 +27,16 @@ namespace CIS_376
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void ReturnButton_Click(object sender, EventArgs e)
         {
             
             inv.Show();
             this.Hide();
+        }
+
+        private void SearchButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

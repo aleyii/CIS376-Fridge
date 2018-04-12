@@ -17,7 +17,7 @@ namespace CIS_376
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void FridgeLayoutButton_Click(object sender, EventArgs e)
         {
             FridgeLayout fl = new FridgeLayout();
             fl.Show();
@@ -37,6 +37,11 @@ namespace CIS_376
         }
 
         private void RecipeButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ViewInventoryButton_Click(object sender, EventArgs e)
         {
 
         }

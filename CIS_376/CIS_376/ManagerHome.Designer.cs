@@ -52,7 +52,7 @@
             this.FridgeLayoutButton.TabIndex = 1;
             this.FridgeLayoutButton.Text = "View Fridge Layout";
             this.FridgeLayoutButton.UseVisualStyleBackColor = true;
-            this.FridgeLayoutButton.Click += new System.EventHandler(this.button1_Click);
+            this.FridgeLayoutButton.Click += new System.EventHandler(this.FridgeLayoutButton_Click);
             // 
             // ViewInventoryButton
             // 
@@ -62,6 +62,7 @@
             this.ViewInventoryButton.TabIndex = 6;
             this.ViewInventoryButton.Text = "View Fridge Inventory";
             this.ViewInventoryButton.UseVisualStyleBackColor = true;
+            this.ViewInventoryButton.Click += new System.EventHandler(this.ViewInventoryButton_Click);
             // 
             // RecipeButton
             // 

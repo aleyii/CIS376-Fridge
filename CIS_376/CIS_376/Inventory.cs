@@ -19,7 +19,7 @@ namespace CIS_376
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void SearchFridgeButton_Click(object sender, EventArgs e)
         {
             Search srh = new Search();
             srh.Show();
@@ -31,24 +31,24 @@ namespace CIS_376
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void ReturnButton_Click(object sender, EventArgs e)
         {
             mh.Show();
             this.Hide();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void AddButton_Click(object sender, EventArgs e)
         {
             AddItem add = new AddItem();
             add.Show();
             this.Hide();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void RemoveFoodButton_Click(object sender, EventArgs e)
         {
-            RemoveItem rmv = new RemoveItem();
+           /* RemoveItem rmv = new RemoveItem();
             rmv.Show();
-            this.Hide();
+            this.Hide();*/
         }
     }
 }
