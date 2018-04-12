@@ -33,6 +33,8 @@
             this.SearchFridgeButton = new System.Windows.Forms.Button();
             this.AddItem = new System.Windows.Forms.Button();
             this.RemoveFoodButton = new System.Windows.Forms.Button();
+            this.InvGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.InvGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // FridgeInventroyLabel
@@ -85,11 +87,21 @@
             this.RemoveFoodButton.UseVisualStyleBackColor = true;
             this.RemoveFoodButton.Click += new System.EventHandler(this.RemoveFoodButton_Click);
             // 
+            // InvGridView
+            // 
+            this.InvGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.InvGridView.Location = new System.Drawing.Point(39, 80);
+            this.InvGridView.Name = "InvGridView";
+            this.InvGridView.ReadOnly = true;
+            this.InvGridView.Size = new System.Drawing.Size(737, 304);
+            this.InvGridView.TabIndex = 6;
+            // 
             // Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.InvGridView);
             this.Controls.Add(this.RemoveFoodButton);
             this.Controls.Add(this.AddItem);
             this.Controls.Add(this.SearchFridgeButton);
@@ -98,6 +110,7 @@
             this.Name = "Inventory";
             this.Text = "Inventory";
             this.Load += new System.EventHandler(this.Inventory_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.InvGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,5 +123,6 @@
         private System.Windows.Forms.Button SearchFridgeButton;
         private System.Windows.Forms.Button AddItem;
         private System.Windows.Forms.Button RemoveFoodButton;
+        private System.Windows.Forms.DataGridView InvGridView;
     }
 }

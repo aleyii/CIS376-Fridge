@@ -19,6 +19,23 @@ namespace CIS_376
             InitializeComponent();
         }
 
+        private void FillInventoryGrid()
+        {
+            // table formatting
+            this.InvGridView.DefaultCellStyle.SelectionBackColor = this.InvGridView.DefaultCellStyle.BackColor;
+            this.InvGridView.DefaultCellStyle.SelectionForeColor = this.InvGridView.DefaultCellStyle.ForeColor;
+            InvGridView.RowHeadersVisible = false;
+
+            // fetch food data from database and populate food table with it
+            InvGridView.DataSource = null;
+            InvGridView.DataSource = ManagerHome.mainDatabaseReference.Foods.ToList().Select(p => new { p.Food_ID, p.Food_Name, p.Food_Type, p.Exp_Date }).ToList();
+            
+            /*// table formatting
+            InvGridView.Columns[1].Width = 170;
+            InvGridView.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            InvGridView.Columns[0].Visible = false;*/
+        }
+
         private void SearchFridgeButton_Click(object sender, EventArgs e)
         {
             Search srh = new Search();
@@ -49,6 +66,7 @@ namespace CIS_376
            /* RemoveItem rmv = new RemoveItem();
             rmv.Show();
             this.Hide();*/
+            // TODO: Implement remove function
         }
     }
 }

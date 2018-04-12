@@ -35,7 +35,7 @@ namespace CIS_376
 
         private void UpdateInventoryButton_Click(object sender, EventArgs e)
         {
-            Inventory inv = new Inventory();
+            var inv = new Inventory();
             inv.Show();
             this.Hide();
         }
@@ -47,12 +47,14 @@ namespace CIS_376
 
         private void ViewInventoryButton_Click(object sender, EventArgs e)
         {
-
+            var inventory = new Inventory();
+            inventory.Show();
+            this.Hide();
         }
 
         private void EmailButton_Click(object sender, EventArgs e)
         {
-            ReminderEmail email = new ReminderEmail();
+            var email = new ReminderEmail();
             email.Show();
             this.Hide();
         }

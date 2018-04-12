@@ -12,8 +12,6 @@ namespace CIS_376
 {
     public partial class AddItem : Form
     {
-        TextBox objTextBox;
-        string theText;
         public AddItem()
         {
             InitializeComponent();
@@ -25,67 +23,14 @@ namespace CIS_376
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void ReturnButton_Click(object sender, EventArgs e)
         {
-            Inventory inv = new Inventory();
-
-            inv.Show();
-            this.Hide();
+            this.Close();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void SubmitButton_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-             objTextBox = (TextBox)sender;
-             theText = objTextBox.Text;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            label1.Text = theText;
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog file = new OpenFileDialog();
-            file.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
-            if (file.ShowDialog() == DialogResult.OK)
-            {
-                textBox12.Text = file.FileName; ;
-            }
-        }
-
-        private void textBox12_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
+            // TODO: Implement regular expressions to handle input
 
         }
     }
