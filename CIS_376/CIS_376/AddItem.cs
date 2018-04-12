@@ -48,7 +48,7 @@ namespace CIS_376
             p.Shelf_Id == shelfNum && p.Food1
             == null).ToList();
 
-            if (!empties.Any())
+            if (empties.Any())
             {
                 return 1;
             }
@@ -58,7 +58,7 @@ namespace CIS_376
             p.Shelf_Id == shelfNum && p.Food2
             == null).ToList();
 
-            if (!empties.Any())
+            if (empties.Any())
             {
                 return 2;
             }
@@ -68,7 +68,7 @@ namespace CIS_376
             p.Shelf_Id == shelfNum && p.Food3
             == null).ToList();
 
-            if (!empties.Any())
+            if (empties.Any())
             {
                 return 3;
             }
@@ -78,7 +78,7 @@ namespace CIS_376
             p.Shelf_Id == shelfNum && p.Food4
             == null).ToList();
 
-            if (!empties.Any())
+            if (empties.Any())
             {
                 return 4;
             }
@@ -88,7 +88,7 @@ namespace CIS_376
             p.Shelf_Id == shelfNum && p.Food5
             == null).ToList();
 
-            if (!empties.Any())
+            if (empties.Any())
             {
                 return 5;
             }
@@ -108,7 +108,7 @@ namespace CIS_376
             type = TypeBox.Text;
             expDate = ExpDateBox.Text;
             Int32.TryParse(QuantBox.Text, out quantity);
-            Int32.TryParse(ShelfBox.Text, out shelf);
+            //Int32.TryParse(ShelfBox.Text, out shelf);
 
             // grab max food id
             maxID = ManagerHome.mainDatabaseReference.Foods.Max(p => p.Food_ID);
@@ -133,9 +133,18 @@ namespace CIS_376
                 }
                 try
                 {
+                    ManagerHome.mainDatabaseReference.SaveChanges();
+                }
+                catch (Exception exc)
+                {
+                    MessageBox.Show("Unable to save changes");
+                }
+                try
+                {
                     // find first open spot
                     firstOpenSpot = ShelveNewFood(name, shelf);
                     var openSpace = ManagerHome.mainDatabaseReference.Shelves.SingleOrDefault(p => p.Shelf_Id == shelf);
+                    
                     // determine which shelf to put food item on
                     switch (firstOpenSpot)
                     {
@@ -167,7 +176,6 @@ namespace CIS_376
                 try
                 {
                     ManagerHome.mainDatabaseReference.SaveChanges();
-
                 }
                 catch (Exception exc)
                 {
@@ -179,7 +187,8 @@ namespace CIS_376
             NameBox.Clear();
             TypeBox.Clear();
             QuantBox.Clear();
-            ShelfBox.Clear();
+            //ShelfBox.Clear();
+            ExpDateBox.Clear();
         }
     }
 }

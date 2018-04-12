@@ -37,8 +37,6 @@
             this.QuantBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.ShelfBox = new System.Windows.Forms.TextBox();
             this.ExpDateLabel = new System.Windows.Forms.Label();
             this.ExpDateBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -121,22 +119,6 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Food Type:";
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(50, 193);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(74, 13);
-            this.label12.TabIndex = 20;
-            this.label12.Text = "Shelf Number:";
-            // 
-            // ShelfBox
-            // 
-            this.ShelfBox.Location = new System.Drawing.Point(137, 193);
-            this.ShelfBox.Name = "ShelfBox";
-            this.ShelfBox.Size = new System.Drawing.Size(100, 20);
-            this.ShelfBox.TabIndex = 23;
-            // 
             // ExpDateLabel
             // 
             this.ExpDateLabel.AutoSize = true;
@@ -160,8 +142,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.ExpDateBox);
             this.Controls.Add(this.ExpDateLabel);
-            this.Controls.Add(this.ShelfBox);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.QuantBox);
@@ -189,8 +169,6 @@
         private System.Windows.Forms.TextBox QuantBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox ShelfBox;
         private System.Windows.Forms.Label ExpDateLabel;
         private System.Windows.Forms.TextBox ExpDateBox;
     }
