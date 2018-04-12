@@ -69,12 +69,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChangeItemQuan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ChangeItemQuan.Designer.cs">
-      <DependentUpon>ChangeItemQuan.cs</DependentUpon>
-    </Compile>
     <Compile Include="dbTest.cs" />
     <Compile Include="Food.cs" />
     <Compile Include="Fridge.cs" />
@@ -106,11 +100,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recipe.cs" />
-    <Compile Include="RemoveItem.cs">
+    <Compile Include="ReminderEmail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RemoveItem.Designer.cs">
-      <DependentUpon>RemoveItem.cs</DependentUpon>
+    <Compile Include="ReminderEmail.Designer.cs">
+      <DependentUpon>ReminderEmail.cs</DependentUpon>
     </Compile>
     <Compile Include="Search.cs">
       <SubType>Form</SubType>
@@ -118,9 +112,6 @@
     <Compile Include="Search.Designer.cs">
       <DependentUpon>Search.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ChangeItemQuan.resx">
-      <DependentUpon>ChangeItemQuan.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FridgeLayout.resx">
       <DependentUpon>FridgeLayout.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,8 +134,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="RemoveItem.resx">
-      <DependentUpon>RemoveItem.cs</DependentUpon>
+    <EmbeddedResource Include="ReminderEmail.resx">
+      <DependentUpon>ReminderEmail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Search.resx">
       <DependentUpon>Search.cs</DependentUpon>

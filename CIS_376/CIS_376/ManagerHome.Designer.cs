@@ -32,6 +32,7 @@
             this.FridgeLayoutButton = new System.Windows.Forms.Button();
             this.ViewInventoryButton = new System.Windows.Forms.Button();
             this.RecipeButton = new System.Windows.Forms.Button();
+            this.EmailButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // HomePageLabel
@@ -46,7 +47,7 @@
             // 
             // FridgeLayoutButton
             // 
-            this.FridgeLayoutButton.Location = new System.Drawing.Point(172, 286);
+            this.FridgeLayoutButton.Location = new System.Drawing.Point(183, 258);
             this.FridgeLayoutButton.Name = "FridgeLayoutButton";
             this.FridgeLayoutButton.Size = new System.Drawing.Size(138, 46);
             this.FridgeLayoutButton.TabIndex = 1;
@@ -56,7 +57,7 @@
             // 
             // ViewInventoryButton
             // 
-            this.ViewInventoryButton.Location = new System.Drawing.Point(319, 180);
+            this.ViewInventoryButton.Location = new System.Drawing.Point(330, 152);
             this.ViewInventoryButton.Name = "ViewInventoryButton";
             this.ViewInventoryButton.Size = new System.Drawing.Size(138, 46);
             this.ViewInventoryButton.TabIndex = 6;
@@ -66,7 +67,7 @@
             // 
             // RecipeButton
             // 
-            this.RecipeButton.Location = new System.Drawing.Point(469, 286);
+            this.RecipeButton.Location = new System.Drawing.Point(480, 258);
             this.RecipeButton.Name = "RecipeButton";
             this.RecipeButton.Size = new System.Drawing.Size(138, 46);
             this.RecipeButton.TabIndex = 7;
@@ -74,11 +75,22 @@
             this.RecipeButton.UseVisualStyleBackColor = true;
             this.RecipeButton.Click += new System.EventHandler(this.RecipeButton_Click);
             // 
+            // EmailButton
+            // 
+            this.EmailButton.Location = new System.Drawing.Point(330, 364);
+            this.EmailButton.Name = "EmailButton";
+            this.EmailButton.Size = new System.Drawing.Size(138, 46);
+            this.EmailButton.TabIndex = 8;
+            this.EmailButton.Text = "Send Email Reminder";
+            this.EmailButton.UseVisualStyleBackColor = true;
+            this.EmailButton.Click += new System.EventHandler(this.EmailButton_Click);
+            // 
             // ManagerHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.EmailButton);
             this.Controls.Add(this.RecipeButton);
             this.Controls.Add(this.ViewInventoryButton);
             this.Controls.Add(this.FridgeLayoutButton);
@@ -97,6 +109,7 @@
         private System.Windows.Forms.Button FridgeLayoutButton;
         private System.Windows.Forms.Button ViewInventoryButton;
         private System.Windows.Forms.Button RecipeButton;
+        private System.Windows.Forms.Button EmailButton;
     }
 }
 

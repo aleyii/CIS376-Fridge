@@ -45,5 +45,12 @@ namespace CIS_376
         {
 
         }
+
+        private void EmailButton_Click(object sender, EventArgs e)
+        {
+            ReminderEmail email = new ReminderEmail();
+            email.Show();
+            this.Hide();
+        }
     }
 }
