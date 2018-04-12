@@ -44,3 +44,26 @@ C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.
 C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.pdb
 C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\bin\Debug\FridgeDatabase.mdf
 C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\bin\Debug\FridgeDatabase_log.ldf
+G:\git\CIS 297\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.csprojResolveAssemblyReference.cache
+G:\git\CIS 297\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.ChangeItemQuan.resources
+G:\git\CIS 297\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.FridgeLayout.resources
+G:\git\CIS 297\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.Inventory.resources
+G:\git\CIS 297\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.ManagerHome.resources
+G:\git\CIS 297\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.AddItem.resources
+G:\git\CIS 297\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.Properties.Resources.resources
+G:\git\CIS 297\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.RemoveItem.resources
+G:\git\CIS 297\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.Search.resources
+G:\git\CIS 297\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.csproj.GenerateResource.cache
+G:\git\CIS 297\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.csproj.CoreCompileInputs.cache
+G:\git\CIS 297\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.exe
+G:\git\CIS 297\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.pdb
+G:\git\CIS 297\CIS376-Fridge\CIS_376\CIS_376\bin\Debug\FridgeDatabase.mdf
+G:\git\CIS 297\CIS376-Fridge\CIS_376\CIS_376\bin\Debug\FridgeDatabase_log.ldf
+G:\git\CIS 297\CIS376-Fridge\CIS_376\CIS_376\bin\Debug\CIS_376.exe.config
+G:\git\CIS 297\CIS376-Fridge\CIS_376\CIS_376\bin\Debug\CIS_376.exe
+G:\git\CIS 297\CIS376-Fridge\CIS_376\CIS_376\bin\Debug\CIS_376.pdb
+G:\git\CIS 297\CIS376-Fridge\CIS_376\CIS_376\bin\Debug\EntityFramework.dll
+G:\git\CIS 297\CIS376-Fridge\CIS_376\CIS_376\bin\Debug\EntityFramework.SqlServer.dll
+G:\git\CIS 297\CIS376-Fridge\CIS_376\CIS_376\bin\Debug\EntityFramework.xml
+G:\git\CIS 297\CIS376-Fridge\CIS_376\CIS_376\bin\Debug\EntityFramework.SqlServer.xml
+G:\git\CIS 297\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.csproj.CopyComplete

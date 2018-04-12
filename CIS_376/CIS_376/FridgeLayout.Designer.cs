@@ -141,8 +141,6 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 13);
             this.label3.TabIndex = 10;
-            this.label3.Text = "Old Section";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 

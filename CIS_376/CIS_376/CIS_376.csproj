@@ -76,12 +76,15 @@
       <DependentUpon>ChangeItemQuan.cs</DependentUpon>
     </Compile>
     <Compile Include="dbTest.cs" />
+    <Compile Include="Food.cs" />
+    <Compile Include="Fridge.cs" />
     <Compile Include="FridgeLayout.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FridgeLayout.Designer.cs">
       <DependentUpon>FridgeLayout.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ingredient.cs" />
     <Compile Include="Inventory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +105,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recipe.cs" />
     <Compile Include="RemoveItem.cs">
       <SubType>Form</SubType>
     </Compile>

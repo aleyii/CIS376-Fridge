@@ -12,12 +12,9 @@ namespace CIS_376
 {
     public partial class ManagerHome : Form
     {
-
-      
         public ManagerHome()
         {
             InitializeComponent();
-            HomePageLabel.Text = "Store Manager Homepage";// set text of label
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -32,16 +29,16 @@ namespace CIS_376
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
+        private void UpdateInventoryButton_Click(object sender, EventArgs e)
         {
             Inventory inv = new Inventory();
             inv.Show();
             this.Hide();
+        }
+
+        private void RecipeButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

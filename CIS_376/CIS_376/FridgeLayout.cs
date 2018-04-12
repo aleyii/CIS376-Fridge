@@ -17,11 +17,6 @@ namespace CIS_376
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Return_Click(object sender, EventArgs e)
         {
             ManagerHome mh = new ManagerHome();
