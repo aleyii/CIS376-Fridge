@@ -12,9 +12,12 @@ namespace CIS_376
 {
     public partial class ManagerHome : Form
     {
+
+      
         public ManagerHome()
         {
             InitializeComponent();
+            HomePageLabel.Text = "Store Manager Homepage";// set text of label
         }
 
         private void button1_Click(object sender, EventArgs e)
