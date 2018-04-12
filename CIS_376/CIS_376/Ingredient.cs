@@ -15,7 +15,6 @@ namespace CIS_376
         }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Ingredients_Id { get; set; }
 
         public int? Ingredients_1 { get; set; }

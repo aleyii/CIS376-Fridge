@@ -12,7 +12,6 @@ namespace CIS_376
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Food()
         {
-            Fridges = new HashSet<Fridge>();
             Ingredients = new HashSet<Ingredient>();
             Ingredients1 = new HashSet<Ingredient>();
             Ingredients2 = new HashSet<Ingredient>();
@@ -23,10 +22,19 @@ namespace CIS_376
             Ingredients7 = new HashSet<Ingredient>();
             Ingredients8 = new HashSet<Ingredient>();
             Ingredients9 = new HashSet<Ingredient>();
+            Shelves = new HashSet<Shelf>();
+            Shelves1 = new HashSet<Shelf>();
+            Shelves2 = new HashSet<Shelf>();
+            Shelves3 = new HashSet<Shelf>();
+            Shelves4 = new HashSet<Shelf>();
+            Shelves5 = new HashSet<Shelf>();
+            Shelves6 = new HashSet<Shelf>();
+            Shelves7 = new HashSet<Shelf>();
+            Shelves8 = new HashSet<Shelf>();
+            Shelves9 = new HashSet<Shelf>();
         }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Food_ID { get; set; }
 
         [Required]
@@ -39,8 +47,7 @@ namespace CIS_376
         [StringLength(10)]
         public string Exp_Date { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Fridge> Fridges { get; set; }
+        public int Quantity { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Ingredient> Ingredients { get; set; }
@@ -73,5 +80,35 @@ namespace CIS_376
         public virtual ICollection<Ingredient> Ingredients9 { get; set; }
 
         public virtual Recipe Recipe { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Shelf> Shelves { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Shelf> Shelves1 { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Shelf> Shelves2 { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Shelf> Shelves3 { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Shelf> Shelves4 { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Shelf> Shelves5 { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Shelf> Shelves6 { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Shelf> Shelves7 { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Shelf> Shelves8 { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Shelf> Shelves9 { get; set; }
     }
 }

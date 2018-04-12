@@ -39,6 +39,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.ShelfBox = new System.Windows.Forms.TextBox();
+            this.ExpDateLabel = new System.Windows.Forms.Label();
+            this.ExpDateBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -135,11 +137,29 @@
             this.ShelfBox.Size = new System.Drawing.Size(100, 20);
             this.ShelfBox.TabIndex = 23;
             // 
+            // ExpDateLabel
+            // 
+            this.ExpDateLabel.AutoSize = true;
+            this.ExpDateLabel.Location = new System.Drawing.Point(42, 232);
+            this.ExpDateLabel.Name = "ExpDateLabel";
+            this.ExpDateLabel.Size = new System.Drawing.Size(82, 13);
+            this.ExpDateLabel.TabIndex = 24;
+            this.ExpDateLabel.Text = "Expiration Date:";
+            // 
+            // ExpDateBox
+            // 
+            this.ExpDateBox.Location = new System.Drawing.Point(137, 225);
+            this.ExpDateBox.Name = "ExpDateBox";
+            this.ExpDateBox.Size = new System.Drawing.Size(100, 20);
+            this.ExpDateBox.TabIndex = 25;
+            // 
             // AddItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ExpDateBox);
+            this.Controls.Add(this.ExpDateLabel);
             this.Controls.Add(this.ShelfBox);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label7);
@@ -152,8 +172,7 @@
             this.Controls.Add(this.ReturnButton);
             this.Controls.Add(this.label1);
             this.Name = "AddItem";
-            this.Text = "Form2";
-            this.Load += new System.EventHandler(this.Form2_Load);
+            this.Text = "Add Food";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,5 +191,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox ShelfBox;
+        private System.Windows.Forms.Label ExpDateLabel;
+        private System.Windows.Forms.TextBox ExpDateBox;
     }
 }

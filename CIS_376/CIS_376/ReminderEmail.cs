@@ -18,7 +18,7 @@ namespace CIS_376
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void TestButton_Click(object sender, EventArgs e)
         {
             //http://csharp.net-informations.com/communications/csharp-smtp-mail.htm
             try
@@ -64,6 +64,11 @@ namespace CIS_376
             {
 
             }
+        }
+
+        private void ReturnButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

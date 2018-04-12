@@ -8,14 +8,15 @@ namespace CIS_376
     public partial class dbTest : DbContext
     {
         public dbTest()
-            : base("name=FridgeDBEntity")
+            : base("name=dbTest")
         {
         }
 
         public virtual DbSet<Food> Foods { get; set; }
-        public virtual DbSet<Fridge> Fridges { get; set; }
         public virtual DbSet<Ingredient> Ingredients { get; set; }
+        public virtual DbSet<Layout> Layouts { get; set; }
         public virtual DbSet<Recipe> Recipes { get; set; }
+        public virtual DbSet<Shelf> Shelves { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -30,11 +31,6 @@ namespace CIS_376
             modelBuilder.Entity<Food>()
                 .Property(e => e.Exp_Date)
                 .IsUnicode(false);
-
-            modelBuilder.Entity<Food>()
-                .HasMany(e => e.Fridges)
-                .WithRequired(e => e.Food)
-                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Food>()
                 .HasMany(e => e.Ingredients)
@@ -90,6 +86,31 @@ namespace CIS_376
                 .HasOptional(e => e.Recipe)
                 .WithRequired(e => e.Food);
 
+            modelBuilder.Entity<Food>()
+                .HasMany(e => e.Shelves)
+                .WithOptional(e => e.Food)
+                .HasForeignKey(e => e.Food1);
+
+            modelBuilder.Entity<Food>()
+                .HasMany(e => e.Shelves1)
+                .WithOptional(e => e.Food11)
+                .HasForeignKey(e => e.Food2);
+
+            modelBuilder.Entity<Food>()
+                .HasMany(e => e.Shelves2)
+                .WithOptional(e => e.Food12)
+                .HasForeignKey(e => e.Food3);
+
+            modelBuilder.Entity<Food>()
+                .HasMany(e => e.Shelves3)
+                .WithOptional(e => e.Food13)
+                .HasForeignKey(e => e.Food4);
+
+            modelBuilder.Entity<Food>()
+                .HasMany(e => e.Shelves4)
+                .WithOptional(e => e.Food14)
+                .HasForeignKey(e => e.Food5);
+
             modelBuilder.Entity<Ingredient>()
                 .HasMany(e => e.Recipes)
                 .WithRequired(e => e.Ingredient)
@@ -100,6 +121,24 @@ namespace CIS_376
                 .Property(e => e.Name)
                 .IsFixedLength()
                 .IsUnicode(false);
+
+            modelBuilder.Entity<Shelf>()
+                .HasMany(e => e.Layouts)
+                .WithRequired(e => e.Shelf)
+                .HasForeignKey(e => e.Shelf1)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Shelf>()
+                .HasMany(e => e.Layouts1)
+                .WithRequired(e => e.Shelf4)
+                .HasForeignKey(e => e.Shelf2)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Shelf>()
+                .HasMany(e => e.Layouts2)
+                .WithRequired(e => e.Shelf5)
+                .HasForeignKey(e => e.Shelf3)
+                .WillCascadeOnDelete(false);
         }
     }
 }

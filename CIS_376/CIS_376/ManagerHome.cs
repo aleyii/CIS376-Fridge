@@ -25,38 +25,29 @@ namespace CIS_376
         {
             FridgeLayout fl = new FridgeLayout();
             fl.Show();
-            this.Hide();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void UpdateInventoryButton_Click(object sender, EventArgs e)
         {
             var inv = new Inventory();
             inv.Show();
-            this.Hide();
         }
 
         private void RecipeButton_Click(object sender, EventArgs e)
         {
-
+            // TODO: Add view recipe form
         }
 
         private void ViewInventoryButton_Click(object sender, EventArgs e)
         {
             var inventory = new Inventory();
             inventory.Show();
-            this.Hide();
         }
 
         private void EmailButton_Click(object sender, EventArgs e)
         {
             var email = new ReminderEmail();
             email.Show();
-            this.Hide();
         }
     }
 }

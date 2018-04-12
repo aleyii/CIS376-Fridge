@@ -28,22 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.TestButton = new System.Windows.Forms.Button();
             this.EmailAddressBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.VerifyEmail = new System.Windows.Forms.Button();
+            this.ReturnButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // TestButton
             // 
-            this.button1.Location = new System.Drawing.Point(512, 36);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Send test";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.TestButton.Location = new System.Drawing.Point(250, 229);
+            this.TestButton.Name = "TestButton";
+            this.TestButton.Size = new System.Drawing.Size(75, 23);
+            this.TestButton.TabIndex = 0;
+            this.TestButton.Text = "Send Test";
+            this.TestButton.UseVisualStyleBackColor = true;
+            this.TestButton.Click += new System.EventHandler(this.TestButton_Click);
             // 
             // EmailAddressBox
             // 
@@ -83,16 +84,27 @@
             this.VerifyEmail.UseVisualStyleBackColor = true;
             this.VerifyEmail.Click += new System.EventHandler(this.VerifyEmail_Click);
             // 
+            // ReturnButton
+            // 
+            this.ReturnButton.Location = new System.Drawing.Point(509, 60);
+            this.ReturnButton.Name = "ReturnButton";
+            this.ReturnButton.Size = new System.Drawing.Size(75, 23);
+            this.ReturnButton.TabIndex = 5;
+            this.ReturnButton.Text = "Return";
+            this.ReturnButton.UseVisualStyleBackColor = true;
+            this.ReturnButton.Click += new System.EventHandler(this.ReturnButton_Click);
+            // 
             // ReminderEmail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(618, 414);
+            this.Controls.Add(this.ReturnButton);
             this.Controls.Add(this.VerifyEmail);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.EmailAddressBox);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.TestButton);
             this.Name = "ReminderEmail";
             this.Text = "ReminderEmail";
             this.ResumeLayout(false);
@@ -102,10 +114,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button TestButton;
         private System.Windows.Forms.TextBox EmailAddressBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button VerifyEmail;
+        private System.Windows.Forms.Button ReturnButton;
     }
 }

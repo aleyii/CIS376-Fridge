@@ -23,20 +23,17 @@ namespace CIS_376
                 textBox1.ForeColor = Color.Gray;
 
             }
-               
-
         }
 
         private void ReturnButton_Click(object sender, EventArgs e)
         {
-            
-            inv.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void SearchButton_Click(object sender, EventArgs e)
         {
-
+            var search = new Search();
+            search.Show();
         }
     }
 }

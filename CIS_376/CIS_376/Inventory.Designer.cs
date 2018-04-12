@@ -49,7 +49,7 @@
             // 
             // ReturnButton
             // 
-            this.ReturnButton.Location = new System.Drawing.Point(701, 390);
+            this.ReturnButton.Location = new System.Drawing.Point(683, 55);
             this.ReturnButton.Name = "ReturnButton";
             this.ReturnButton.Size = new System.Drawing.Size(75, 23);
             this.ReturnButton.TabIndex = 1;
@@ -93,7 +93,7 @@
             this.InvGridView.Location = new System.Drawing.Point(39, 80);
             this.InvGridView.Name = "InvGridView";
             this.InvGridView.ReadOnly = true;
-            this.InvGridView.Size = new System.Drawing.Size(737, 304);
+            this.InvGridView.Size = new System.Drawing.Size(517, 304);
             this.InvGridView.TabIndex = 6;
             // 
             // Inventory
@@ -109,7 +109,6 @@
             this.Controls.Add(this.FridgeInventroyLabel);
             this.Name = "Inventory";
             this.Text = "Inventory";
-            this.Load += new System.EventHandler(this.Inventory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.InvGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
