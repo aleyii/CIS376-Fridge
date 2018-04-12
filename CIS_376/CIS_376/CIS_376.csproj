@@ -160,10 +160,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FridgeDatabase.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="FridgeDatabase_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>FridgeDatabase.mdf</DependentUpon>
     </Content>
   </ItemGroup>

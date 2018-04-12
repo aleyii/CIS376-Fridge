@@ -12,6 +12,8 @@ namespace CIS_376
 {
     public partial class AddItem : Form
     {
+        static int SHELF_LIMIT = 3;
+
         public AddItem()
         {
             InitializeComponent();
@@ -37,60 +39,59 @@ namespace CIS_376
             this.Close();
         }
 
-        private int ShelveNewFood(string name, int shelfNum)
+        private int ShelveNewFood(string name)
         {
             /*
              *these code smells make me wanna vom, 
              * but I can't think of another way to do it with how our database is set up*/
 
-            // find first open space on shelf # shelfNum
-            var empties = ManagerHome.mainDatabaseReference.Shelves.Select(p =>
-            p.Shelf_Id == shelfNum && p.Food1
-            == null).ToList();
-
-            if (empties.Any())
+            for (int i = 0; i < SHELF_LIMIT; i++)
             {
-                return 1;
-            }
+                
+                // find first open space on shelf # shelfNum
+                var empties = ManagerHome.mainDatabaseReference.Shelves.Select(p =>
+                p.Shelf_Id == i && p.Food1 == null).ToList();
 
-            // spot 2
-            empties = ManagerHome.mainDatabaseReference.Shelves.Select(p =>
-            p.Shelf_Id == shelfNum && p.Food2
-            == null).ToList();
+                if (empties.Any())
+                {
+                    return 1;
+                }
 
-            if (empties.Any())
-            {
-                return 2;
-            }
+                // spot 2
+                empties = ManagerHome.mainDatabaseReference.Shelves.Select(p =>
+                p.Shelf_Id == i && p.Food2 == null).ToList();
 
-            // spot 3
-            empties = ManagerHome.mainDatabaseReference.Shelves.Select(p =>
-            p.Shelf_Id == shelfNum && p.Food3
-            == null).ToList();
+                if (empties.Any())
+                {
+                    return 2;
+                }
 
-            if (empties.Any())
-            {
-                return 3;
-            }
+                // spot 3
+                empties = ManagerHome.mainDatabaseReference.Shelves.Select(p =>
+                p.Shelf_Id == i && p.Food3 == null).ToList();
 
-            // spot 4
-            empties = ManagerHome.mainDatabaseReference.Shelves.Select(p =>
-            p.Shelf_Id == shelfNum && p.Food4
-            == null).ToList();
+                if (empties.Any())
+                {
+                    return 3;
+                }
 
-            if (empties.Any())
-            {
-                return 4;
-            }
+                // spot 4
+                empties = ManagerHome.mainDatabaseReference.Shelves.Select(p =>
+                p.Shelf_Id == i && p.Food4  == null).ToList();
 
-            // spot 5
-            empties = ManagerHome.mainDatabaseReference.Shelves.Select(p =>
-            p.Shelf_Id == shelfNum && p.Food5
-            == null).ToList();
+                if (empties.Any())
+                {
+                    return 4;
+                }
 
-            if (empties.Any())
-            {
-                return 5;
+                // spot 5
+                empties = ManagerHome.mainDatabaseReference.Shelves.Select(p =>
+                p.Shelf_Id == i && p.Food5 == null).ToList();
+
+                if (empties.Any())
+                {
+                    return 5;
+                }
             }
             return -1;
         }
@@ -100,7 +101,7 @@ namespace CIS_376
             // TODO: Implement regular expressions to handle input
             // TODO: Ensure that the user enters text
             string name, type, expDate;
-            int quantity, shelf, firstOpenSpot, maxID;
+            int quantity, firstOpenSpot, maxID;
             Food food;
 
             // get all values from textboxes
@@ -133,20 +134,12 @@ namespace CIS_376
                 }
                 try
                 {
-                    ManagerHome.mainDatabaseReference.SaveChanges();
-                }
-                catch (Exception exc)
-                {
-                    MessageBox.Show("Unable to save changes");
-                }
-                try
-                {
                     // find first open spot
-                    firstOpenSpot = ShelveNewFood(name, shelf);
-                    var openSpace = ManagerHome.mainDatabaseReference.Shelves.SingleOrDefault(p => p.Shelf_Id == shelf);
+                    firstOpenSpot = ShelveNewFood(name);
+                    //var openSpace = ManagerHome.mainDatabaseReference.Shelves.SingleOrDefault(p => p.Shelf_Id == shelf);
                     
                     // determine which shelf to put food item on
-                    switch (firstOpenSpot)
+                    /*switch (firstOpenSpot)
                     {
                         case 1:
                             openSpace.Food1 = maxID;
@@ -167,7 +160,7 @@ namespace CIS_376
                             // no empty space available
                             MessageBox.Show("No open space for this item");
                             break;
-                    }
+                    }*/
                 }
                 catch (Exception exc)
                 {
