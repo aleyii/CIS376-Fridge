@@ -1,20 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
 
 namespace CIS_376
 {
+    
     public partial class ManagerHome : Form
     {
+        public static dbTest mainDatabaseReference;
+
         public ManagerHome()
         {
             InitializeComponent();
+            mainDatabaseReference = new dbTest();
         }
 
         private void FridgeLayoutButton_Click(object sender, EventArgs e)
