@@ -20,6 +20,7 @@ namespace CIS_376
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //http://csharp.net-informations.com/communications/csharp-smtp-mail.htm
             try
             {
                 MailMessage mail = new MailMessage();
