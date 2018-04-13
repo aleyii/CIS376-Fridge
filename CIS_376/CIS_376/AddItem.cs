@@ -135,17 +135,17 @@ namespace CIS_376
                     food.Quantity = quantity;
                     food.Exp_Date = expDate;
                     ManagerHome.mainDatabaseReference.Foods.Add(food);
-                    maxID++;
                 }
                 catch (Exception exc)
                 {
                     MessageBox.Show("Failed to add new food");
                 }
-                /*try
+                try
                 {
                     // find first open spot
                     firstOpenSpot = ShelveNewFood(name);
-                    var openSpace = ManagerHome.mainDatabaseReference.Shelves.SingleOrDefault(p => p.Shelf_Id == firstOpenSpot[0]);
+                    int openShelf = firstOpenSpot[0];
+                    var openSpace = ManagerHome.mainDatabaseReference.Shelves.SingleOrDefault(p => p.Shelf_Id == openShelf);
                     
                     // determine which shelf to put food item on
                     switch (firstOpenSpot[1])
@@ -174,12 +174,10 @@ namespace CIS_376
                 catch (Exception exc)
                 {
                     MessageBox.Show("Unable to add item to shelf");
-                }*/
+                }
                 try
                 {
                     ManagerHome.mainDatabaseReference.SaveChanges();
-                    
-                    
                 }
                 catch (Exception exc)
                 {
@@ -192,6 +190,7 @@ namespace CIS_376
             TypeBox.Clear();
             QuantBox.Clear();
             ExpDateBox.Clear();
+            maxID++;
         }
     }
 }
