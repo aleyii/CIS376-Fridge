@@ -84,7 +84,6 @@
     <Compile Include="Inventory.Designer.cs">
       <DependentUpon>Inventory.cs</DependentUpon>
     </Compile>
-    <Compile Include="Layout.cs" />
     <Compile Include="ManagerHome.cs">
       <SubType>Form</SubType>
     </Compile>

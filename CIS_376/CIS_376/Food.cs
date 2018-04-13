@@ -27,11 +27,6 @@ namespace CIS_376
             Shelves2 = new HashSet<Shelf>();
             Shelves3 = new HashSet<Shelf>();
             Shelves4 = new HashSet<Shelf>();
-            Shelves5 = new HashSet<Shelf>();
-            Shelves6 = new HashSet<Shelf>();
-            Shelves7 = new HashSet<Shelf>();
-            Shelves8 = new HashSet<Shelf>();
-            Shelves9 = new HashSet<Shelf>();
         }
 
         [Key]
@@ -95,20 +90,5 @@ namespace CIS_376
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Shelf> Shelves4 { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Shelf> Shelves5 { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Shelf> Shelves6 { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Shelf> Shelves7 { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Shelf> Shelves8 { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Shelf> Shelves9 { get; set; }
     }
 }

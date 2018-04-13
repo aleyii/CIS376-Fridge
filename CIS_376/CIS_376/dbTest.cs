@@ -14,7 +14,6 @@ namespace CIS_376
 
         public virtual DbSet<Food> Foods { get; set; }
         public virtual DbSet<Ingredient> Ingredients { get; set; }
-        public virtual DbSet<Layout> Layouts { get; set; }
         public virtual DbSet<Recipe> Recipes { get; set; }
         public virtual DbSet<Shelf> Shelves { get; set; }
 
@@ -93,22 +92,22 @@ namespace CIS_376
 
             modelBuilder.Entity<Food>()
                 .HasMany(e => e.Shelves1)
-                .WithOptional(e => e.Food11)
+                .WithOptional(e => e.Food6)
                 .HasForeignKey(e => e.Food2);
 
             modelBuilder.Entity<Food>()
                 .HasMany(e => e.Shelves2)
-                .WithOptional(e => e.Food12)
+                .WithOptional(e => e.Food7)
                 .HasForeignKey(e => e.Food3);
 
             modelBuilder.Entity<Food>()
                 .HasMany(e => e.Shelves3)
-                .WithOptional(e => e.Food13)
+                .WithOptional(e => e.Food8)
                 .HasForeignKey(e => e.Food4);
 
             modelBuilder.Entity<Food>()
                 .HasMany(e => e.Shelves4)
-                .WithOptional(e => e.Food14)
+                .WithOptional(e => e.Food9)
                 .HasForeignKey(e => e.Food5);
 
             modelBuilder.Entity<Ingredient>()
@@ -121,24 +120,6 @@ namespace CIS_376
                 .Property(e => e.Name)
                 .IsFixedLength()
                 .IsUnicode(false);
-
-            modelBuilder.Entity<Shelf>()
-                .HasMany(e => e.Layouts)
-                .WithRequired(e => e.Shelf)
-                .HasForeignKey(e => e.Shelf1)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Shelf>()
-                .HasMany(e => e.Layouts1)
-                .WithRequired(e => e.Shelf4)
-                .HasForeignKey(e => e.Shelf2)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Shelf>()
-                .HasMany(e => e.Layouts2)
-                .WithRequired(e => e.Shelf5)
-                .HasForeignKey(e => e.Shelf3)
-                .WillCascadeOnDelete(false);
         }
     }
 }
