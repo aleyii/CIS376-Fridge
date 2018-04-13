@@ -34,6 +34,7 @@
             this.AddItem = new System.Windows.Forms.Button();
             this.RemoveFoodButton = new System.Windows.Forms.Button();
             this.InvGridView = new System.Windows.Forms.DataGridView();
+            this.Refresh_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.InvGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,11 +97,22 @@
             this.InvGridView.Size = new System.Drawing.Size(517, 304);
             this.InvGridView.TabIndex = 6;
             // 
+            // Refresh_button
+            // 
+            this.Refresh_button.Location = new System.Drawing.Point(563, 80);
+            this.Refresh_button.Name = "Refresh_button";
+            this.Refresh_button.Size = new System.Drawing.Size(75, 23);
+            this.Refresh_button.TabIndex = 7;
+            this.Refresh_button.Text = "Refresh";
+            this.Refresh_button.UseVisualStyleBackColor = true;
+            this.Refresh_button.Click += new System.EventHandler(this.Refresh_button_Click);
+            // 
             // Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Refresh_button);
             this.Controls.Add(this.InvGridView);
             this.Controls.Add(this.RemoveFoodButton);
             this.Controls.Add(this.AddItem);
@@ -124,5 +136,6 @@
         private System.Windows.Forms.Button AddItem;
         private System.Windows.Forms.Button RemoveFoodButton;
         private System.Windows.Forms.DataGridView InvGridView;
+        private System.Windows.Forms.Button Refresh_button;
     }
 }

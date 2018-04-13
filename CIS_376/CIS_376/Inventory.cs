@@ -20,7 +20,7 @@ namespace CIS_376
             FillInventoryGrid();
         }
 
-        private void FillInventoryGrid()
+        public void FillInventoryGrid()
         {
             // table formatting
             this.InvGridView.DefaultCellStyle.SelectionBackColor = this.InvGridView.DefaultCellStyle.BackColor;
@@ -58,6 +58,11 @@ namespace CIS_376
         private void Inventory_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Refresh_button_Click(object sender, EventArgs e)
+        {
+            FillInventoryGrid();
         }
     }
 }

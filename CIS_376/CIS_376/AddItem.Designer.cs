@@ -56,7 +56,7 @@
             this.ReturnButton.Location = new System.Drawing.Point(660, 49);
             this.ReturnButton.Name = "ReturnButton";
             this.ReturnButton.Size = new System.Drawing.Size(75, 23);
-            this.ReturnButton.TabIndex = 1;
+            this.ReturnButton.TabIndex = 6;
             this.ReturnButton.Text = "Return";
             this.ReturnButton.UseVisualStyleBackColor = true;
             this.ReturnButton.Click += new System.EventHandler(this.ReturnButton_Click);
@@ -66,14 +66,14 @@
             this.NameBox.Location = new System.Drawing.Point(137, 101);
             this.NameBox.Name = "NameBox";
             this.NameBox.Size = new System.Drawing.Size(100, 20);
-            this.NameBox.TabIndex = 3;
+            this.NameBox.TabIndex = 1;
             // 
             // SubmitButton
             // 
             this.SubmitButton.Location = new System.Drawing.Point(319, 134);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(75, 23);
-            this.SubmitButton.TabIndex = 4;
+            this.SubmitButton.TabIndex = 5;
             this.SubmitButton.Text = "Submit";
             this.SubmitButton.UseVisualStyleBackColor = true;
             this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
@@ -92,14 +92,14 @@
             this.TypeBox.Location = new System.Drawing.Point(137, 134);
             this.TypeBox.Name = "TypeBox";
             this.TypeBox.Size = new System.Drawing.Size(100, 20);
-            this.TypeBox.TabIndex = 6;
+            this.TypeBox.TabIndex = 2;
             // 
             // QuantBox
             // 
             this.QuantBox.Location = new System.Drawing.Point(137, 163);
             this.QuantBox.Name = "QuantBox";
             this.QuantBox.Size = new System.Drawing.Size(100, 20);
-            this.QuantBox.TabIndex = 8;
+            this.QuantBox.TabIndex = 3;
             // 
             // label4
             // 
@@ -133,7 +133,7 @@
             this.ExpDateBox.Location = new System.Drawing.Point(137, 225);
             this.ExpDateBox.Name = "ExpDateBox";
             this.ExpDateBox.Size = new System.Drawing.Size(100, 20);
-            this.ExpDateBox.TabIndex = 25;
+            this.ExpDateBox.TabIndex = 4;
             // 
             // AddItem
             // 
