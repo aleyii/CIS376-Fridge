@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.Return = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ConfirmButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -57,14 +57,15 @@
             this.Return.UseVisualStyleBackColor = true;
             this.Return.Click += new System.EventHandler(this.Return_Click);
             // 
-            // button1
+            // ConfirmButton
             // 
-            this.button1.Location = new System.Drawing.Point(659, 359);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Confirm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ConfirmButton.Location = new System.Drawing.Point(659, 359);
+            this.ConfirmButton.Name = "ConfirmButton";
+            this.ConfirmButton.Size = new System.Drawing.Size(75, 23);
+            this.ConfirmButton.TabIndex = 4;
+            this.ConfirmButton.Text = "Confirm";
+            this.ConfirmButton.UseVisualStyleBackColor = true;
+            this.ConfirmButton.Click += new System.EventHandler(this.ConfirmButton_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -122,7 +123,7 @@
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ConfirmButton);
             this.Controls.Add(this.Return);
             this.Controls.Add(this.label1);
             this.Name = "FridgeLayout";
@@ -136,7 +137,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Return;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ConfirmButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox3;

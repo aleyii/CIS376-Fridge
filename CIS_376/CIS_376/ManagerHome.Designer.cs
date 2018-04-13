@@ -97,7 +97,6 @@
             this.Controls.Add(this.HomePageLabel);
             this.Name = "ManagerHome";
             this.Text = "Fridge Menu";
-            this.Load += new System.EventHandler(this.ManagerHome_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

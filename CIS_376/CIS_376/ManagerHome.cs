@@ -24,13 +24,9 @@ namespace CIS_376
         private void FridgeLayoutButton_Click(object sender, EventArgs e)
         {
             FridgeLayout fl = new FridgeLayout();
+            fl.Owner = this;
             fl.Show();
-        }
-
-        private void UpdateInventoryButton_Click(object sender, EventArgs e)
-        {
-            var inv = new Inventory();
-            inv.Show();
+            this.Hide();
         }
 
         private void RecipeButton_Click(object sender, EventArgs e)
@@ -49,12 +45,9 @@ namespace CIS_376
         private void EmailButton_Click(object sender, EventArgs e)
         {
             var email = new ReminderEmail();
+            email.Owner = this;
             email.Show();
-        }
-
-        private void ManagerHome_Load(object sender, EventArgs e)
-        {
-
+            this.Hide();
         }
     }
 }

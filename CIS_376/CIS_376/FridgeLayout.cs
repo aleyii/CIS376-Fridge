@@ -19,9 +19,13 @@ namespace CIS_376
 
         private void Return_Click(object sender, EventArgs e)
         {
-            ManagerHome mh = new ManagerHome();
-            mh.Show();
-            this.Hide();
+            this.Owner.Show();
+            this.Close();
+        }
+
+        private void ConfirmButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
