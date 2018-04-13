@@ -13,7 +13,7 @@ namespace CIS_376
     public partial class Inventory : Form
     {
         
-        ManagerHome mh = new ManagerHome();
+       // ManagerHome mh = new ManagerHome();
         public Inventory()
         {
             InitializeComponent();
@@ -40,6 +40,7 @@ namespace CIS_376
 
         private void ReturnButton_Click(object sender, EventArgs e)
         {
+            this.Owner.Show();
             this.Close();
         }
 
@@ -52,6 +53,11 @@ namespace CIS_376
         private void RemoveFoodButton_Click(object sender, EventArgs e)
         {
             // TODO: Implement remove function
+        }
+
+        private void Inventory_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

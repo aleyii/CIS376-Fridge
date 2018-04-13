@@ -109,6 +109,7 @@
             this.Controls.Add(this.FridgeInventroyLabel);
             this.Name = "Inventory";
             this.Text = "Inventory";
+            this.Load += new System.EventHandler(this.Inventory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.InvGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

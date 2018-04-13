@@ -40,14 +40,21 @@ namespace CIS_376
 
         private void ViewInventoryButton_Click(object sender, EventArgs e)
         {
-            var inventory = new Inventory();
+            var inventory = new Inventory(); // type var?-Aley
+            inventory.Owner = this;
             inventory.Show();
+            this.Hide();
         }
 
         private void EmailButton_Click(object sender, EventArgs e)
         {
             var email = new ReminderEmail();
             email.Show();
+        }
+
+        private void ManagerHome_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
