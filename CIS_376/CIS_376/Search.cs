@@ -27,6 +27,7 @@ namespace CIS_376
 
         private void ReturnButton_Click(object sender, EventArgs e)
         {
+            this.Owner.Show();
             this.Close();
         }
 
@@ -34,6 +35,11 @@ namespace CIS_376
         {
             var search = new Search();
             search.Show();
+        }
+
+        private void Search_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -56,6 +56,7 @@ namespace CIS_376
         private void QuitButton_Click(object sender, EventArgs e)
         {
             this.Close();
+            //system.exit();?
         }
     }
 }
