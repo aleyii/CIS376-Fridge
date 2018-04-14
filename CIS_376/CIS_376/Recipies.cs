@@ -16,5 +16,11 @@ namespace CIS_376
         {
             InitializeComponent();
         }
+
+        private void Return_Click(object sender, EventArgs e)
+        {
+            this.Owner.Show();
+            this.Close();
+        }
     }
 }

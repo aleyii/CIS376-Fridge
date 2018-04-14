@@ -13,11 +13,10 @@ namespace CIS_376
         public int Recipe_ID { get; set; }
 
         [Required]
-        [StringLength(30)]
         public string Name { get; set; }
 
         public int Ingredients { get; set; }
 
-        public virtual Food Food { get; set; }
+        public virtual IngredientsSet IngredientsSet { get; set; }
     }
 }

@@ -31,7 +31,10 @@ namespace CIS_376
 
         private void RecipeButton_Click(object sender, EventArgs e)
         {
-            // TODO: Add view recipe form
+            var recipes = new Recipies();
+            recipes.Owner = this;
+            recipes.Show();
+            this.Hide();
         }
 
         private void ViewInventoryButton_Click(object sender, EventArgs e)

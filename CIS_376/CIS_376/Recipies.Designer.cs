@@ -78,6 +78,7 @@
             this.Return.TabIndex = 4;
             this.Return.Text = "Return";
             this.Return.UseVisualStyleBackColor = true;
+            this.Return.Click += new System.EventHandler(this.Return_Click);
             // 
             // Recipies
             // 

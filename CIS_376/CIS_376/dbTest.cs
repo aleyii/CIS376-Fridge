@@ -13,8 +13,8 @@ namespace CIS_376
         }
 
         public virtual DbSet<Food> Foods { get; set; }
+        public virtual DbSet<IngredientsSet> IngredientsSets { get; set; }
         public virtual DbSet<Recipe> Recipes { get; set; }
-        public virtual DbSet<Shelf> Shelves { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -31,12 +31,39 @@ namespace CIS_376
                 .IsUnicode(false);
 
             modelBuilder.Entity<Food>()
-                .HasOptional(e => e.Recipe)
-                .WithRequired(e => e.Food);
+                .HasMany(e => e.IngredientsSets)
+                .WithRequired(e => e.Food)
+                .HasForeignKey(e => e.Ingredient1)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Food>()
+                .HasMany(e => e.IngredientsSets1)
+                .WithOptional(e => e.Food1)
+                .HasForeignKey(e => e.Ingredient2);
+
+            modelBuilder.Entity<Food>()
+                .HasMany(e => e.IngredientsSets2)
+                .WithOptional(e => e.Food2)
+                .HasForeignKey(e => e.Ingredient3);
+
+            modelBuilder.Entity<Food>()
+                .HasMany(e => e.IngredientsSets3)
+                .WithOptional(e => e.Food3)
+                .HasForeignKey(e => e.Ingredient4);
+
+            modelBuilder.Entity<Food>()
+                .HasMany(e => e.IngredientsSets4)
+                .WithOptional(e => e.Food4)
+                .HasForeignKey(e => e.Ingredient5);
+
+            modelBuilder.Entity<IngredientsSet>()
+                .HasMany(e => e.Recipes)
+                .WithRequired(e => e.IngredientsSet)
+                .HasForeignKey(e => e.Ingredients)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Recipe>()
                 .Property(e => e.Name)
-                .IsFixedLength()
                 .IsUnicode(false);
         }
     }
