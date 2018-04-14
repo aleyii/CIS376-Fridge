@@ -12,6 +12,8 @@ namespace CIS_376
 {
     public partial class FridgeLayout : Form
     {
+        Shelf shelf;
+
         public FridgeLayout()
         {
             InitializeComponent();
@@ -24,9 +26,7 @@ namespace CIS_376
             //dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.DefaultCellStyle.SelectionBackColor = this.dataGridView1.DefaultCellStyle.BackColor;
             this.dataGridView1.DefaultCellStyle.SelectionForeColor = this.dataGridView1.DefaultCellStyle.ForeColor;
-            var foodId1 = ManagerHome.mainDatabaseReference.Shelves.Select(p => new {p.Food1});
-            label2.Text = foodId1.ToString();
-            dataGridView1.DataSource = ManagerHome.mainDatabaseReference.Shelves.Select(p => new { p.Food }).ToList();
+           // var foodId1 = Int32.Parse(ManagerHome.mainDatabaseReference.Shelves.Select(p => new { p.Food1}).ToString());
         }
 
         private void Return_Click(object sender, EventArgs e)
