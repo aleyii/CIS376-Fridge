@@ -156,7 +156,8 @@
             "Grain",
             "Dairy",
             "Meat",
-            "Beverage"});
+            "Beverage",
+            "Condiments"});
             this.TypeBox.Location = new System.Drawing.Point(137, 134);
             this.TypeBox.Name = "TypeBox";
             this.TypeBox.Size = new System.Drawing.Size(100, 21);
