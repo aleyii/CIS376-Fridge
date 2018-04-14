@@ -33,6 +33,7 @@
             this.ViewInventoryButton = new System.Windows.Forms.Button();
             this.RecipeButton = new System.Windows.Forms.Button();
             this.EmailButton = new System.Windows.Forms.Button();
+            this.QuitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // HomePageLabel
@@ -85,11 +86,22 @@
             this.EmailButton.UseVisualStyleBackColor = true;
             this.EmailButton.Click += new System.EventHandler(this.EmailButton_Click);
             // 
+            // QuitButton
+            // 
+            this.QuitButton.Location = new System.Drawing.Point(690, 36);
+            this.QuitButton.Name = "QuitButton";
+            this.QuitButton.Size = new System.Drawing.Size(75, 23);
+            this.QuitButton.TabIndex = 9;
+            this.QuitButton.Text = "Quit";
+            this.QuitButton.UseVisualStyleBackColor = true;
+            this.QuitButton.Click += new System.EventHandler(this.QuitButton_Click);
+            // 
             // ManagerHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.QuitButton);
             this.Controls.Add(this.EmailButton);
             this.Controls.Add(this.RecipeButton);
             this.Controls.Add(this.ViewInventoryButton);
@@ -109,6 +121,7 @@
         private System.Windows.Forms.Button ViewInventoryButton;
         private System.Windows.Forms.Button RecipeButton;
         private System.Windows.Forms.Button EmailButton;
+        private System.Windows.Forms.Button QuitButton;
     }
 }
 

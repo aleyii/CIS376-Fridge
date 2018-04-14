@@ -90,10 +90,17 @@
             // 
             // InvGridView
             // 
+            this.InvGridView.AllowUserToResizeColumns = false;
+            this.InvGridView.AllowUserToResizeRows = false;
+            this.InvGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.InvGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.InvGridView.Cursor = System.Windows.Forms.Cursors.Default;
             this.InvGridView.Location = new System.Drawing.Point(39, 80);
+            this.InvGridView.MultiSelect = false;
             this.InvGridView.Name = "InvGridView";
             this.InvGridView.ReadOnly = true;
+            this.InvGridView.RowTemplate.ReadOnly = true;
+            this.InvGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.InvGridView.Size = new System.Drawing.Size(517, 304);
             this.InvGridView.TabIndex = 6;
             // 
@@ -121,7 +128,6 @@
             this.Controls.Add(this.FridgeInventroyLabel);
             this.Name = "Inventory";
             this.Text = "Inventory";
-            this.Load += new System.EventHandler(this.Inventory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.InvGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

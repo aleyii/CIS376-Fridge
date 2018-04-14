@@ -36,6 +36,7 @@ namespace CIS_376
 
         private void ReturnButton_Click(object sender, EventArgs e)
         {
+            this.Owner.Show();
             this.Close();
         }
 
@@ -118,7 +119,6 @@ namespace CIS_376
             type = TypeBox.Text;
             expDate = ExpDateBox.Text;
             Int32.TryParse(QuantBox.Text, out quantity);
-            //Int32.TryParse(ShelfBox.Text, out shelf);
 
             // grab max food id
             maxID = ManagerHome.mainDatabaseReference.Foods.Max(p => p.Food_ID);
@@ -138,6 +138,7 @@ namespace CIS_376
                 }
                 catch (Exception exc)
                 {
+                    ManagerHome.mainDatabaseReference.Foods.Remove(food);
                     MessageBox.Show("Failed to add new food");
                 }
                 try
@@ -173,6 +174,7 @@ namespace CIS_376
                 }
                 catch (Exception exc)
                 {
+                    ManagerHome.mainDatabaseReference.Foods.Remove(food);
                     MessageBox.Show("Unable to add item to shelf");
                 }
                 try
