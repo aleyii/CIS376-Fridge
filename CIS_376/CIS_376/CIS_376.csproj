@@ -77,7 +77,7 @@
     <Compile Include="FridgeLayout.Designer.cs">
       <DependentUpon>FridgeLayout.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ingredient.cs" />
+    <Compile Include="IngredientsSet.cs" />
     <Compile Include="Inventory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,7 +117,6 @@
     <Compile Include="Search.Designer.cs">
       <DependentUpon>Search.cs</DependentUpon>
     </Compile>
-    <Compile Include="Shelf.cs" />
     <EmbeddedResource Include="FridgeLayout.resx">
       <DependentUpon>FridgeLayout.cs</DependentUpon>
     </EmbeddedResource>
