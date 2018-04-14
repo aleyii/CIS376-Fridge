@@ -87,7 +87,7 @@ namespace CIS_376
             }
         }
 
-        private void ShelfHelper(int removedID)
+        /*private void ShelfHelper(int removedID)
         {
             List<Shelf> entries1, entries2, entries3, entries4, entries5;
             for (int i = 0; i < SHELF_NUM; i++)
@@ -123,7 +123,7 @@ namespace CIS_376
 
                 }
             }
-        }
+        }*/
 
         private void AdjustIDs(int removedID)
         {
