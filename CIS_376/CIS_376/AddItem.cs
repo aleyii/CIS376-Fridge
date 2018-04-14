@@ -12,11 +12,12 @@ namespace CIS_376
 {
     public partial class AddItem : Form
     {
-        static int SHELF_LIMIT = 3;
+        static int SHELF_LIMIT = 4;
 
         public AddItem()
         {
             InitializeComponent();
+            FillShelfComboBox();
         }
 
         private bool HasDupe(String name)
@@ -38,71 +39,6 @@ namespace CIS_376
         {
             this.Owner.Show();
             this.Close();
-        }
-
-        private int[] ShelveNewFood(string name)
-        {
-            /*
-             *these code smells make me wanna vom, 
-             * but I can't think of another way to do it with how our database is set up*/
-            int[] shelfID_and_slotNum = new int[2];
-            for (int i = 0; i < SHELF_LIMIT; i++)
-            {
-                shelfID_and_slotNum[0] = i + 1;
-
-                // find first open space on shelf # shelfNum
-                var empties = ManagerHome.mainDatabaseReference.Shelves.Select(p =>
-                p.Shelf_Id == i && p.Food1 == null).ToList();
-
-                if (empties.Any())
-                {
-                    shelfID_and_slotNum[1] = 1;
-                    return shelfID_and_slotNum;
-                }
-
-                // spot 2
-                empties = ManagerHome.mainDatabaseReference.Shelves.Select(p =>
-                p.Shelf_Id == i && p.Food2 == null).ToList();
-
-                if (empties.Any())
-                {
-                    shelfID_and_slotNum[1] = 2;
-                    return shelfID_and_slotNum;
-                }
-
-                // spot 3
-                empties = ManagerHome.mainDatabaseReference.Shelves.Select(p =>
-                p.Shelf_Id == i && p.Food3 == null).ToList();
-
-                if (empties.Any())
-                {
-                    shelfID_and_slotNum[1] = 3;
-                    return shelfID_and_slotNum;
-                }
-
-                // spot 4
-                empties = ManagerHome.mainDatabaseReference.Shelves.Select(p =>
-                p.Shelf_Id == i && p.Food4  == null).ToList();
-
-                if (empties.Any())
-                {
-                    shelfID_and_slotNum[1] = 4;
-                    return shelfID_and_slotNum;
-                }
-
-                // spot 5
-                empties = ManagerHome.mainDatabaseReference.Shelves.Select(p =>
-                p.Shelf_Id == i && p.Food5 == null).ToList();
-
-                if (empties.Any())
-                {
-                    shelfID_and_slotNum[1] = 5;
-                    return shelfID_and_slotNum;
-                }
-            }
-            shelfID_and_slotNum[0] = -1;
-            shelfID_and_slotNum[1] = -1;
-            return shelfID_and_slotNum;
         }
 
         private void SubmitButton_Click(object sender, EventArgs e)
@@ -141,42 +77,7 @@ namespace CIS_376
                     ManagerHome.mainDatabaseReference.Foods.Remove(food);
                     MessageBox.Show("Failed to add new food");
                 }
-                try
-                {
-                    // find first open spot
-                    firstOpenSpot = ShelveNewFood(name);
-                    int openShelf = firstOpenSpot[0];
-                    var openSpace = ManagerHome.mainDatabaseReference.Shelves.SingleOrDefault(p => p.Shelf_Id == openShelf);
-                    
-                    // determine which shelf to put food item on
-                    switch (firstOpenSpot[1])
-                    {
-                        case 1:
-                            openSpace.Food1 = maxID;
-                            break;
-                        case 2:
-                            openSpace.Food2 = maxID;
-                            break;
-                        case 3:
-                            openSpace.Food3 = maxID;
-                            break;
-                        case 4:
-                            openSpace.Food4 = maxID;
-                            break;
-                        case 5:
-                            openSpace.Food5 = maxID;
-                            break;
-                        default:
-                            // no empty space available
-                            MessageBox.Show("No open space for this item");
-                            break;
-                    }
-                }
-                catch (Exception exc)
-                {
-                    ManagerHome.mainDatabaseReference.Foods.Remove(food);
-                    MessageBox.Show("Unable to add item to shelf");
-                }
+
                 try
                 {
                     ManagerHome.mainDatabaseReference.SaveChanges();
@@ -193,6 +94,13 @@ namespace CIS_376
             QuantBox.Clear();
             ExpDateBox.Clear();
             maxID++;
+        }
+        private void FillShelfComboBox()
+        {
+            for (int i = 0; i < SHELF_LIMIT; i++)
+            {
+                ShelfComboBox.Items.Add(i + 1);                     // ascii mona lisa.jpg
+            }
         }
     }
 }

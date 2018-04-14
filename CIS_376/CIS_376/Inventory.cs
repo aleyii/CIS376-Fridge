@@ -12,7 +12,6 @@ namespace CIS_376
 {
     public partial class Inventory : Form
     {
-        private static int SHELF_NUM = 3;
         public Inventory()
         {
             InitializeComponent();
@@ -86,56 +85,7 @@ namespace CIS_376
                 MessageBox.Show("Could not remove");
             }
         }
-
-        /*private void ShelfHelper(int removedID)
-        {
-            List<Shelf> entries1, entries2, entries3, entries4, entries5;
-            for (int i = 0; i < SHELF_NUM; i++)
-            {
-                entries1 = ManagerHome.mainDatabaseReference.Shelves.Where(p =>
-                p.Shelf_Id == i && p.Food1 == 2).ToList();
-                if (entries1.Any())
-                {
-                    
-                }
-                entries2 = ManagerHome.mainDatabaseReference.Shelves.Where(p =>
-                p.Shelf_Id == i && p.Food2 == 2).ToList();
-                if ()
-                {
-
-                }
-                entries3 = ManagerHome.mainDatabaseReference.Shelves.Where(p =>
-                p.Shelf_Id == i && p.Food3 == 2).ToList();
-                if ()
-                {
-
-                }
-                entries4 = ManagerHome.mainDatabaseReference.Shelves.Where(p =>
-                p.Shelf_Id == i && p.Food4 == 2).ToList();
-                if ()
-                {
-
-                }
-                entries5 = ManagerHome.mainDatabaseReference.Shelves.Where(p =>
-                p.Shelf_Id == i && p.Food5 == 2).ToList();
-                if ()
-                {
-
-                }
-            }
-        }*/
-
-        private void AdjustIDs(int removedID)
-        {
-            int tempID;
-            // get all tuples greater than removedID
-            var toBeAdjusted = ManagerHome.mainDatabaseReference.Foods.Where(p => p.Food_ID > removedID).ToList();
-            for (int i = 0; i < toBeAdjusted.Count; i++)
-            {
-                toBeAdjusted[i].Food_ID--;
-            }
-        }
-
+        
         private void Refresh_button_Click(object sender, EventArgs e)
         {
             FillInventoryGrid();

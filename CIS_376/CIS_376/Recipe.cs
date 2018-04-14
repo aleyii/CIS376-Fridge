@@ -19,7 +19,5 @@ namespace CIS_376
         public int Ingredients { get; set; }
 
         public virtual Food Food { get; set; }
-
-        public virtual Ingredient Ingredient { get; set; }
     }
 }
