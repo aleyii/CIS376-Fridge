@@ -216,11 +216,6 @@ Backup*/
 UpgradeLog*.XML
 UpgradeLog*.htm
 
-# SQL Server files
-*.mdf
-*.ldf
-*.ndf
-
 # Business Intelligence projects
 *.rdl.data
 *.bim.layout
@@ -247,6 +242,8 @@ typings/
 
 # Visual Studio 6 auto-generated workspace file (contains which files were open etc.)
 *.vbw
+
+*.pdp
 
 # Visual Studio LightSwitch build output
 **/*.HTMLClient/GeneratedArtifacts
