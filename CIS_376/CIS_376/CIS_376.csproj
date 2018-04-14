@@ -163,9 +163,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Tidee.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="FridgeDatabase.mdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -173,6 +170,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>FridgeDatabase.mdf</DependentUpon>
     </Content>
+    <Content Include="Resources\Tidee.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">

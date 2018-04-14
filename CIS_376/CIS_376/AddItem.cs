@@ -47,13 +47,12 @@ namespace CIS_376
             // TODO: Ensure that the user enters text
             string name, type, expDate;
             int quantity, maxID;
-            int[] firstOpenSpot = new int[2];
             Food food;
 
             // get all values from textboxes
             name = NameBox.Text;
             type = TypeBox.Text;
-            expDate = ExpDateBox.Text;
+            expDate = ExpDateBox.Value.ToShortDateString();
             Int32.TryParse(QuantBox.Text, out quantity);
 
             // grab max food id
@@ -66,9 +65,11 @@ namespace CIS_376
                 try
                 {
                     // add food to database
+                    //food.Food_ID = maxID;
                     food.Food_Name = name;
                     food.Food_Type = type;
                     food.Quantity = quantity;
+                    food.Shelf_Number = Int32.Parse(ShelfComboBox.Text);
                     food.Exp_Date = expDate;
                     ManagerHome.mainDatabaseReference.Foods.Add(food);
                 }
@@ -92,7 +93,8 @@ namespace CIS_376
             NameBox.Clear();
             TypeBox.Clear();
             QuantBox.Clear();
-            ExpDateBox.Clear();
+            ExpDateBox.ResetText();
+            ShelfComboBox.Text = "";
             maxID++;
         }
         private void FillShelfComboBox()

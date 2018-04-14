@@ -38,9 +38,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.ExpDateLabel = new System.Windows.Forms.Label();
-            this.ExpDateBox = new System.Windows.Forms.TextBox();
             this.ShelfComboBox = new System.Windows.Forms.ComboBox();
             this.ShelfLabel = new System.Windows.Forms.Label();
+            this.ExpDateBox = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -58,7 +58,7 @@
             this.ReturnButton.Location = new System.Drawing.Point(660, 49);
             this.ReturnButton.Name = "ReturnButton";
             this.ReturnButton.Size = new System.Drawing.Size(75, 23);
-            this.ReturnButton.TabIndex = 6;
+            this.ReturnButton.TabIndex = 7;
             this.ReturnButton.Text = "Return";
             this.ReturnButton.UseVisualStyleBackColor = true;
             this.ReturnButton.Click += new System.EventHandler(this.ReturnButton_Click);
@@ -75,7 +75,7 @@
             this.SubmitButton.Location = new System.Drawing.Point(162, 275);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(75, 23);
-            this.SubmitButton.TabIndex = 5;
+            this.SubmitButton.TabIndex = 6;
             this.SubmitButton.Text = "Submit";
             this.SubmitButton.UseVisualStyleBackColor = true;
             this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
@@ -130,20 +130,13 @@
             this.ExpDateLabel.TabIndex = 24;
             this.ExpDateLabel.Text = "Expiration Date:";
             // 
-            // ExpDateBox
-            // 
-            this.ExpDateBox.Location = new System.Drawing.Point(137, 225);
-            this.ExpDateBox.Name = "ExpDateBox";
-            this.ExpDateBox.Size = new System.Drawing.Size(100, 20);
-            this.ExpDateBox.TabIndex = 4;
-            // 
             // ShelfComboBox
             // 
             this.ShelfComboBox.FormattingEnabled = true;
             this.ShelfComboBox.Location = new System.Drawing.Point(137, 198);
             this.ShelfComboBox.Name = "ShelfComboBox";
             this.ShelfComboBox.Size = new System.Drawing.Size(100, 21);
-            this.ShelfComboBox.TabIndex = 25;
+            this.ShelfComboBox.TabIndex = 4;
             // 
             // ShelfLabel
             // 
@@ -154,14 +147,21 @@
             this.ShelfLabel.TabIndex = 26;
             this.ShelfLabel.Text = "Shelf:";
             // 
+            // ExpDateBox
+            // 
+            this.ExpDateBox.Location = new System.Drawing.Point(137, 232);
+            this.ExpDateBox.Name = "ExpDateBox";
+            this.ExpDateBox.Size = new System.Drawing.Size(200, 20);
+            this.ExpDateBox.TabIndex = 27;
+            // 
             // AddItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ExpDateBox);
             this.Controls.Add(this.ShelfLabel);
             this.Controls.Add(this.ShelfComboBox);
-            this.Controls.Add(this.ExpDateBox);
             this.Controls.Add(this.ExpDateLabel);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
@@ -191,8 +191,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label ExpDateLabel;
-        private System.Windows.Forms.TextBox ExpDateBox;
         private System.Windows.Forms.ComboBox ShelfComboBox;
         private System.Windows.Forms.Label ShelfLabel;
+        private System.Windows.Forms.DateTimePicker ExpDateBox;
     }
 }
