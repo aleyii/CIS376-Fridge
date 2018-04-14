@@ -77,3 +77,4 @@ C:\Users\ahkra\Google Drive\Semester 6\CIS 376\Project\GIT\CIS376-Fridge\CIS_376
 C:\Users\ahkra\Google Drive\Semester 6\CIS 376\Project\GIT\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.ReminderEmail.resources
 C:\Users\ahkra\Google Drive\Semester 6\CIS 376\Project\GIT\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.csproj.CopyComplete
 C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.csproj.CopyComplete
+C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.csprojResolveAssemblyReference.cache
