@@ -30,12 +30,17 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.Return = new System.Windows.Forms.Button();
+<<<<<<< HEAD
             this.ConfirmButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+=======
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+>>>>>>> parent of b28bdb4... Email reminder functionality solved
             this.SuspendLayout();
             // 
             // label1
@@ -67,6 +72,7 @@
             this.ConfirmButton.UseVisualStyleBackColor = true;
             this.ConfirmButton.Click += new System.EventHandler(this.ConfirmButton_Click);
             // 
+<<<<<<< HEAD
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
@@ -113,17 +119,23 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "New Section";
             // 
+=======
+>>>>>>> parent of b28bdb4... Email reminder functionality solved
             // FridgeLayout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+<<<<<<< HEAD
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.ConfirmButton);
+=======
+            this.Controls.Add(this.dataGridView1);
+>>>>>>> parent of b28bdb4... Email reminder functionality solved
             this.Controls.Add(this.Return);
             this.Controls.Add(this.label1);
             this.Name = "FridgeLayout";
@@ -137,11 +149,15 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Return;
+<<<<<<< HEAD
         private System.Windows.Forms.Button ConfirmButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+=======
+        private System.Windows.Forms.DataGridView dataGridView1;
+>>>>>>> parent of b28bdb4... Email reminder functionality solved
     }
 }
