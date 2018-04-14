@@ -73,6 +73,7 @@
             this.ConfirmButton.Click += new System.EventHandler(this.ConfirmButton_Click);
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
@@ -121,11 +122,14 @@
             // 
 =======
 >>>>>>> parent of b28bdb4... Email reminder functionality solved
+=======
+>>>>>>> parent of b28bdb4... Email reminder functionality solved
             // FridgeLayout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+<<<<<<< HEAD
 <<<<<<< HEAD
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -134,6 +138,8 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.ConfirmButton);
 =======
+=======
+>>>>>>> parent of b28bdb4... Email reminder functionality solved
             this.Controls.Add(this.dataGridView1);
 >>>>>>> parent of b28bdb4... Email reminder functionality solved
             this.Controls.Add(this.Return);
@@ -158,6 +164,9 @@
         private System.Windows.Forms.Label label4;
 =======
         private System.Windows.Forms.DataGridView dataGridView1;
+<<<<<<< HEAD
+>>>>>>> parent of b28bdb4... Email reminder functionality solved
+=======
 >>>>>>> parent of b28bdb4... Email reminder functionality solved
     }
 }

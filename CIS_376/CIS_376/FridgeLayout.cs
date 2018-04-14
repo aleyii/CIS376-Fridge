@@ -29,6 +29,9 @@ namespace CIS_376
             this.dataGridView1.DefaultCellStyle.SelectionBackColor = this.dataGridView1.DefaultCellStyle.BackColor;
             this.dataGridView1.DefaultCellStyle.SelectionForeColor = this.dataGridView1.DefaultCellStyle.ForeColor;
            // var foodId1 = Int32.Parse(ManagerHome.mainDatabaseReference.Shelves.Select(p => new { p.Food1}).ToString());
+<<<<<<< HEAD
+>>>>>>> parent of b28bdb4... Email reminder functionality solved
+=======
 >>>>>>> parent of b28bdb4... Email reminder functionality solved
         }
 
