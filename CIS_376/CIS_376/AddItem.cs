@@ -97,7 +97,7 @@ namespace CIS_376
 
             // clear all fields
             NameBox.Clear();
-            TypeBox.Clear();
+            TypeBox.Text = "";
             QuantBox.Clear();
             ExpDateBox.ResetText();
             ShelfComboBox.Text = "";

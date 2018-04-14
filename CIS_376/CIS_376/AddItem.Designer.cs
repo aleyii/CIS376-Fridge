@@ -33,7 +33,6 @@
             this.NameBox = new System.Windows.Forms.TextBox();
             this.SubmitButton = new System.Windows.Forms.Button();
             this.NameLabel = new System.Windows.Forms.Label();
-            this.TypeBox = new System.Windows.Forms.TextBox();
             this.QuantBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -41,6 +40,7 @@
             this.ShelfComboBox = new System.Windows.Forms.ComboBox();
             this.ShelfLabel = new System.Windows.Forms.Label();
             this.ExpDateBox = new System.Windows.Forms.DateTimePicker();
+            this.TypeBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -88,13 +88,6 @@
             this.NameLabel.Size = new System.Drawing.Size(65, 13);
             this.NameLabel.TabIndex = 5;
             this.NameLabel.Text = "Food Name:";
-            // 
-            // TypeBox
-            // 
-            this.TypeBox.Location = new System.Drawing.Point(137, 134);
-            this.TypeBox.Name = "TypeBox";
-            this.TypeBox.Size = new System.Drawing.Size(100, 20);
-            this.TypeBox.TabIndex = 2;
             // 
             // QuantBox
             // 
@@ -154,11 +147,27 @@
             this.ExpDateBox.Size = new System.Drawing.Size(200, 20);
             this.ExpDateBox.TabIndex = 27;
             // 
+            // TypeBox
+            // 
+            this.TypeBox.FormattingEnabled = true;
+            this.TypeBox.Items.AddRange(new object[] {
+            "Fruit",
+            "Vegetable",
+            "Grain",
+            "Dairy",
+            "Meat",
+            "Beverage"});
+            this.TypeBox.Location = new System.Drawing.Point(137, 134);
+            this.TypeBox.Name = "TypeBox";
+            this.TypeBox.Size = new System.Drawing.Size(100, 21);
+            this.TypeBox.TabIndex = 28;
+            // 
             // AddItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.TypeBox);
             this.Controls.Add(this.ExpDateBox);
             this.Controls.Add(this.ShelfLabel);
             this.Controls.Add(this.ShelfComboBox);
@@ -166,7 +175,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.QuantBox);
-            this.Controls.Add(this.TypeBox);
             this.Controls.Add(this.NameLabel);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.NameBox);
@@ -186,7 +194,6 @@
         private System.Windows.Forms.TextBox NameBox;
         private System.Windows.Forms.Button SubmitButton;
         private System.Windows.Forms.Label NameLabel;
-        private System.Windows.Forms.TextBox TypeBox;
         private System.Windows.Forms.TextBox QuantBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
@@ -194,5 +201,6 @@
         private System.Windows.Forms.ComboBox ShelfComboBox;
         private System.Windows.Forms.Label ShelfLabel;
         private System.Windows.Forms.DateTimePicker ExpDateBox;
+        private System.Windows.Forms.ComboBox TypeBox;
     }
 }
