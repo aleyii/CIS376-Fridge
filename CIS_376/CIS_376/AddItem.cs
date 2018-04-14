@@ -55,9 +55,11 @@ namespace CIS_376
             expDate = ExpDateBox.Value.ToShortDateString();
             Int32.TryParse(QuantBox.Text, out quantity);
 
+
             // grab max food id
             maxID = ManagerHome.mainDatabaseReference.Foods.Max(p => p.Food_ID);
-
+            
+            maxID++;
             // check for duplicate names
             if (!HasDupe(name))
             {
@@ -65,7 +67,7 @@ namespace CIS_376
                 try
                 {
                     // add food to database
-                    //food.Food_ID = maxID;
+                    food.Food_ID = maxID;
                     food.Food_Name = name;
                     food.Food_Type = type;
                     food.Quantity = quantity;
@@ -99,7 +101,6 @@ namespace CIS_376
             QuantBox.Clear();
             ExpDateBox.ResetText();
             ShelfComboBox.Text = "";
-            maxID++;
         }
         private void FillShelfComboBox()
         {
