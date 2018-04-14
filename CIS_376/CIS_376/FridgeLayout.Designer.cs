@@ -104,7 +104,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(219, 206);
+            this.label3.Location = new System.Drawing.Point(208, 206);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(304, 21);
             this.label3.TabIndex = 6;

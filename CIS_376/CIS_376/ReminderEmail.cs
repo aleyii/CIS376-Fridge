@@ -110,6 +110,7 @@ namespace CIS_376
             reminderText = reminderText + $"{FoodBox.Text}\n";
             listView1.Items.Add(item);
             FoodBox.Text = "";
+            listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
         }
     }
 }

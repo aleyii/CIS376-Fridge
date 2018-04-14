@@ -88,6 +88,10 @@ namespace CIS_376
                     MessageBox.Show("Unable to save changes");
                 }
             }
+            else
+            {
+                MessageBox.Show("That food is already in the database!");
+            }
 
             // clear all fields
             NameBox.Clear();

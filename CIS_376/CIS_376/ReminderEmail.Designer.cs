@@ -42,7 +42,7 @@
             // 
             // TestButton
             // 
-            this.TestButton.Location = new System.Drawing.Point(435, 311);
+            this.TestButton.Location = new System.Drawing.Point(341, 310);
             this.TestButton.Name = "TestButton";
             this.TestButton.Size = new System.Drawing.Size(75, 23);
             this.TestButton.TabIndex = 0;
@@ -132,10 +132,10 @@
             // 
             // listView1
             // 
-            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.Location = new System.Drawing.Point(221, 308);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(195, 123);
+            this.listView1.Size = new System.Drawing.Size(104, 123);
             this.listView1.TabIndex = 9;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.Visible = false;
