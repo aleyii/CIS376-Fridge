@@ -31,5 +31,24 @@ namespace CIS_376
             recipes.Show();
             this.Hide();
         }
+
+        private void Search_Click(object sender, EventArgs e)
+        {
+            string searchText = SearchBox.Text;
+            if (searchText != "")
+            {
+                var results = ManagerHome.mainDatabaseReference.Recipes
+                    .Where(p => p.Name == searchText)
+                    .Select(p =>
+                    new { p.Name, p.Description }).ToList();
+                ResultsGrid.DataSource = null;
+                ResultsGrid.DataSource = results;
+            }
+            else
+            {
+                MessageBox.Show("Invalid Input. Try again!");
+                SearchBox.Clear();
+            }
+        }
     }
 }
