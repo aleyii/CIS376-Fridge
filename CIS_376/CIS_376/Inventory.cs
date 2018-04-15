@@ -21,13 +21,12 @@ namespace CIS_376
         public void FillInventoryGrid()
         {
             // table formatting
-            //this.InvGridView.DefaultCellStyle.SelectionBackColor = this.InvGridView.DefaultCellStyle.BackColor;
-            //this.InvGridView.DefaultCellStyle.SelectionForeColor = this.InvGridView.DefaultCellStyle.ForeColor;
             InvGridView.RowHeadersVisible = false;
 
             // fetch food data from database and populate food table with it
             InvGridView.DataSource = null;
-            InvGridView.DataSource = ManagerHome.mainDatabaseReference.Foods.ToList().Select(p => new { p.Food_ID, p.Food_Name, p.Food_Type, p.Exp_Date }).ToList();
+            InvGridView.DataSource = ManagerHome.mainDatabaseReference.Foods.ToList().Select(
+                p => new { p.Food_ID, p.Food_Name, p.Food_Type, p.Exp_Date }).ToList();
         }
 
         private void SearchFridgeButton_Click(object sender, EventArgs e)

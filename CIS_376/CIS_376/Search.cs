@@ -12,17 +12,9 @@ namespace CIS_376
 {
     public partial class Search : Form
     {
-
-        Inventory inv = new Inventory();
         public Search()
         {
             InitializeComponent();
-            if (String.IsNullOrWhiteSpace(textBox1.Text))
-            {
-                textBox1.Text = "Enter text here...";
-                textBox1.ForeColor = Color.Gray;
-
-            }
         }
 
         private void ReturnButton_Click(object sender, EventArgs e)
@@ -33,13 +25,24 @@ namespace CIS_376
 
         private void SearchButton_Click(object sender, EventArgs e)
         {
-            var search = new Search();
-            search.Show();
-        }
-
-        private void Search_Load(object sender, EventArgs e)
-        {
-
+            string searchText = SearchBox.Text;
+            if (searchText != "")
+            {
+                using (var bootleg = new dbTest())
+                {
+                    var results = ManagerHome.mainDatabaseReference.Foods
+                        .Where(p => p.Food_Name == searchText)
+                        .Select(p => 
+                        new { p.Food_ID, p.Food_Name, p.Food_Type, p.Exp_Date, p.Shelf_Number }).ToList();
+                    ResultsGrid.DataSource = null;
+                    ResultsGrid.DataSource = results;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid Input. Try again!");
+                SearchBox.Clear();
+            }
         }
     }
 }

@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SearchBox = new System.Windows.Forms.TextBox();
             this.TitleLabel = new System.Windows.Forms.Label();
             this.ReturnButton = new System.Windows.Forms.Button();
             this.SearchButton = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.ResultsGrid = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.ResultsGrid)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // SearchBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(63, 102);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.SearchBox.Location = new System.Drawing.Point(63, 102);
+            this.SearchBox.Name = "SearchBox";
+            this.SearchBox.Size = new System.Drawing.Size(100, 20);
+            this.SearchBox.TabIndex = 0;
             // 
             // TitleLabel
             // 
@@ -72,34 +73,29 @@
             this.SearchButton.UseVisualStyleBackColor = true;
             this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
             // 
-            // tableLayoutPanel1
+            // ResultsGrid
             // 
-            this.tableLayoutPanel1.AutoSize = true;
-            this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(63, 196);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(338, 161);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.ResultsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ResultsGrid.Location = new System.Drawing.Point(25, 149);
+            this.ResultsGrid.MultiSelect = false;
+            this.ResultsGrid.Name = "ResultsGrid";
+            this.ResultsGrid.ReadOnly = true;
+            this.ResultsGrid.Size = new System.Drawing.Size(521, 267);
+            this.ResultsGrid.TabIndex = 4;
             // 
             // Search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.ResultsGrid);
             this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.ReturnButton);
             this.Controls.Add(this.TitleLabel);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.SearchBox);
             this.Name = "Search";
             this.Text = "Search";
-            this.Load += new System.EventHandler(this.Search_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ResultsGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -107,10 +103,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox SearchBox;
         private System.Windows.Forms.Label TitleLabel;
         private System.Windows.Forms.Button ReturnButton;
         private System.Windows.Forms.Button SearchButton;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.DataGridView ResultsGrid;
     }
 }
