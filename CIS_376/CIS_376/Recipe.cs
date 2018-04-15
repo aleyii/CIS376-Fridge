@@ -10,6 +10,7 @@ namespace CIS_376
     public partial class Recipe
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Recipe_ID { get; set; }
 
         [Required]

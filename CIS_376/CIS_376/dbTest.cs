@@ -38,23 +38,27 @@ namespace CIS_376
 
             modelBuilder.Entity<Food>()
                 .HasMany(e => e.IngredientsSets1)
-                .WithOptional(e => e.Food1)
-                .HasForeignKey(e => e.Ingredient2);
+                .WithRequired(e => e.Food1)
+                .HasForeignKey(e => e.Ingredient2)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Food>()
                 .HasMany(e => e.IngredientsSets2)
-                .WithOptional(e => e.Food2)
-                .HasForeignKey(e => e.Ingredient3);
+                .WithRequired(e => e.Food2)
+                .HasForeignKey(e => e.Ingredient3)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Food>()
                 .HasMany(e => e.IngredientsSets3)
-                .WithOptional(e => e.Food3)
-                .HasForeignKey(e => e.Ingredient4);
+                .WithRequired(e => e.Food3)
+                .HasForeignKey(e => e.Ingredient4)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Food>()
                 .HasMany(e => e.IngredientsSets4)
-                .WithOptional(e => e.Food4)
-                .HasForeignKey(e => e.Ingredient5);
+                .WithRequired(e => e.Food4)
+                .HasForeignKey(e => e.Ingredient5)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<IngredientsSet>()
                 .HasMany(e => e.Recipes)

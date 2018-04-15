@@ -46,14 +46,14 @@ namespace CIS_376
             // TODO: Implement regular expressions to handle input
             // TODO: Ensure that the user enters text
             string name, type, expDate;
-            int quantity, maxID;
+            int maxID;
             Food food;
 
             // get all values from textboxes
             name = NameBox.Text;
             type = TypeBox.Text;
             expDate = ExpDateBox.Value.ToShortDateString();
-            Int32.TryParse(QuantBox.Text, out quantity);
+            Int32.TryParse(QuantBox.Text, out int quantity);
 
 
             // grab max food id
@@ -75,7 +75,9 @@ namespace CIS_376
                     food.Exp_Date = expDate;
                     ManagerHome.mainDatabaseReference.Foods.Add(food);
                 }
+#pragma warning disable CS0168 // Variable is declared but never used
                 catch (Exception exc)
+#pragma warning restore CS0168 // Variable is declared but never used
                 {
                     ManagerHome.mainDatabaseReference.Foods.Remove(food);
                     MessageBox.Show("Failed to add new food");
@@ -85,7 +87,9 @@ namespace CIS_376
                 {
                     ManagerHome.mainDatabaseReference.SaveChanges();
                 }
+#pragma warning disable CS0168 // Variable is declared but never used
                 catch (Exception exc)
+#pragma warning disable CS0168 // Variable is declared but never used
                 {
                     MessageBox.Show("Unable to save changes");
                 }

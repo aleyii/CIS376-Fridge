@@ -80,7 +80,9 @@ namespace CIS_376
                     MessageBox.Show("Food was not removed");
                 }
             }
+#pragma warning disable CS0168 // Variable is declared but never used
             catch (Exception exc)
+#pragma warning restore CS0168 // Variable is declared but never used
             {
                 MessageBox.Show("Could not remove");
             }

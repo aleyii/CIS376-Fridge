@@ -21,13 +21,13 @@ namespace CIS_376
 
         public int Ingredient1 { get; set; }
 
-        public int? Ingredient2 { get; set; }
+        public int Ingredient2 { get; set; }
 
-        public int? Ingredient3 { get; set; }
+        public int Ingredient3 { get; set; }
 
-        public int? Ingredient4 { get; set; }
+        public int Ingredient4 { get; set; }
 
-        public int? Ingredient5 { get; set; }
+        public int Ingredient5 { get; set; }
 
         public virtual Food Food { get; set; }
 
