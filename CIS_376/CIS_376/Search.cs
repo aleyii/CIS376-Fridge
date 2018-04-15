@@ -28,15 +28,12 @@ namespace CIS_376
             string searchText = SearchBox.Text;
             if (searchText != "")
             {
-                using (var bootleg = new dbTest())
-                {
-                    var results = ManagerHome.mainDatabaseReference.Foods
-                        .Where(p => p.Food_Name == searchText)
-                        .Select(p => 
-                        new { p.Food_ID, p.Food_Name, p.Food_Type, p.Exp_Date, p.Shelf_Number }).ToList();
-                    ResultsGrid.DataSource = null;
-                    ResultsGrid.DataSource = results;
-                }
+                var results = ManagerHome.mainDatabaseReference.Foods
+                    .Where(p => p.Food_Name == searchText)
+                    .Select(p =>
+                    new { p.Food_ID, p.Food_Name, p.Food_Type, p.Exp_Date, p.Shelf_Number }).ToList();
+                ResultsGrid.DataSource = null;
+                ResultsGrid.DataSource = results;
             }
             else
             {
