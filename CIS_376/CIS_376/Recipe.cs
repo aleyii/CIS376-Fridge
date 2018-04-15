@@ -17,6 +17,11 @@ namespace CIS_376
 
         public int Ingredients { get; set; }
 
+        [Required]
+        public string Description { get; set; }
+
+        public string PictureURL { get; set; }
+
         public virtual IngredientsSet IngredientsSet { get; set; }
     }
 }

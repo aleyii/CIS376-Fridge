@@ -30,9 +30,9 @@
         {
             this.Recipes = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Ingedients = new System.Windows.Forms.ListBox();
-            this.Directions = new System.Windows.Forms.ListBox();
             this.Return = new System.Windows.Forms.Button();
+            this.Directions = new System.Windows.Forms.Label();
+            this.Ingedients = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,22 +54,6 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // Ingedients
-            // 
-            this.Ingedients.FormattingEnabled = true;
-            this.Ingedients.Location = new System.Drawing.Point(404, 67);
-            this.Ingedients.Name = "Ingedients";
-            this.Ingedients.Size = new System.Drawing.Size(291, 121);
-            this.Ingedients.TabIndex = 2;
-            // 
-            // Directions
-            // 
-            this.Directions.FormattingEnabled = true;
-            this.Directions.Location = new System.Drawing.Point(404, 236);
-            this.Directions.Name = "Directions";
-            this.Directions.Size = new System.Drawing.Size(291, 121);
-            this.Directions.TabIndex = 3;
-            // 
             // Return
             // 
             this.Return.Location = new System.Drawing.Point(619, 35);
@@ -80,14 +64,30 @@
             this.Return.UseVisualStyleBackColor = true;
             this.Return.Click += new System.EventHandler(this.Return_Click);
             // 
+            // Directions
+            // 
+            this.Directions.Location = new System.Drawing.Point(404, 252);
+            this.Directions.Name = "Directions";
+            this.Directions.Size = new System.Drawing.Size(291, 157);
+            this.Directions.TabIndex = 5;
+            this.Directions.Text = "Directions:";
+            // 
+            // Ingedients
+            // 
+            this.Ingedients.Location = new System.Drawing.Point(404, 72);
+            this.Ingedients.Name = "Ingedients";
+            this.Ingedients.Size = new System.Drawing.Size(291, 157);
+            this.Ingedients.TabIndex = 6;
+            this.Ingedients.Text = "Ingredients:";
+            // 
             // Recipies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Return);
-            this.Controls.Add(this.Directions);
             this.Controls.Add(this.Ingedients);
+            this.Controls.Add(this.Directions);
+            this.Controls.Add(this.Return);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Recipes);
             this.Name = "Recipies";
@@ -102,8 +102,8 @@
 
         private System.Windows.Forms.Label Recipes;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ListBox Ingedients;
-        private System.Windows.Forms.ListBox Directions;
         private System.Windows.Forms.Button Return;
+        private System.Windows.Forms.Label Directions;
+        private System.Windows.Forms.Label Ingedients;
     }
 }

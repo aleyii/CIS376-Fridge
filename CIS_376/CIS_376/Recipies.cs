@@ -12,9 +12,37 @@ namespace CIS_376
 {
     public partial class Recipies : Form
     {
+        int minID, maxID, selection;
+        string ingredients;
+
         public Recipies()
         {
             InitializeComponent();
+            PullRandomRecipe();
+        }
+
+        private void PullRandomRecipe()
+        {
+            Random rand = new Random();
+            maxID = ManagerHome.mainDatabaseReference.Recipes.Max(p => p.Recipe_ID);
+            minID = ManagerHome.mainDatabaseReference.Recipes.Min(p => p.Recipe_ID);
+            selection = rand.Next(minID, maxID);
+            //selection = 5;
+            var recipeSelection = ManagerHome.mainDatabaseReference.Recipes.SingleOrDefault(p => p.Recipe_ID == selection);
+            pictureBox1.Load(recipeSelection.PictureURL);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            Directions.Text = $"Directions:\n {recipeSelection.Description}";
+            ingredients = pullIngredients(recipeSelection);
+            Ingedients.Text = $"Ingredients:\n {ingredients}";
+        }
+
+        private string pullIngredients(Recipe input)
+        {
+            return (input.IngredientsSet.Food.Food_Name.ToString()) + ", "+
+                (input.IngredientsSet.Food1.Food_Name.ToString()) + ", " +
+                (input.IngredientsSet.Food2.Food_Name.ToString()) + ", " +
+                (input.IngredientsSet.Food3.Food_Name.ToString()) + ", " +
+                (input.IngredientsSet.Food4.Food_Name.ToString());
         }
 
         private void Return_Click(object sender, EventArgs e)

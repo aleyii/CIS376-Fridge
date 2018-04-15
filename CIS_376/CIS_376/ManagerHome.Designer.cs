@@ -84,7 +84,7 @@
             // 
             // EmailButton
             // 
-            this.EmailButton.Location = new System.Drawing.Point(590, 252);
+            this.EmailButton.Location = new System.Drawing.Point(596, 255);
             this.EmailButton.Name = "EmailButton";
             this.EmailButton.Size = new System.Drawing.Size(138, 46);
             this.EmailButton.TabIndex = 8;
@@ -129,7 +129,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(244, 28);
             this.label3.TabIndex = 12;
-            this.label3.Text = "Recipe Recommendations";
+            this.label3.Text = "Email Reminder";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // RecipeButton2

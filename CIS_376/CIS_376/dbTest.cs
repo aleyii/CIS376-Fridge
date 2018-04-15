@@ -65,6 +65,14 @@ namespace CIS_376
             modelBuilder.Entity<Recipe>()
                 .Property(e => e.Name)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<Recipe>()
+                .Property(e => e.Description)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Recipe>()
+                .Property(e => e.PictureURL)
+                .IsUnicode(false);
         }
     }
 }
