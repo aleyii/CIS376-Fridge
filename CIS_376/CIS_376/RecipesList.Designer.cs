@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ResultsGrid = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.Jump = new System.Windows.Forms.Button();
             this.Return = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SearchBox = new System.Windows.Forms.TextBox();
             this.Search = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ResultsGrid)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // ResultsGrid
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(40, 121);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(472, 289);
-            this.dataGridView1.TabIndex = 0;
+            this.ResultsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ResultsGrid.Location = new System.Drawing.Point(40, 119);
+            this.ResultsGrid.Name = "ResultsGrid";
+            this.ResultsGrid.Size = new System.Drawing.Size(472, 289);
+            this.ResultsGrid.TabIndex = 0;
             // 
             // label1
             // 
@@ -57,7 +57,7 @@
             // 
             // Jump
             // 
-            this.Jump.Location = new System.Drawing.Point(622, 346);
+            this.Jump.Location = new System.Drawing.Point(622, 385);
             this.Jump.Name = "Jump";
             this.Jump.Size = new System.Drawing.Size(75, 23);
             this.Jump.TabIndex = 2;
@@ -75,12 +75,12 @@
             this.Return.UseVisualStyleBackColor = true;
             this.Return.Click += new System.EventHandler(this.Return_Click);
             // 
-            // textBox1
+            // SearchBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(40, 76);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(135, 20);
-            this.textBox1.TabIndex = 4;
+            this.SearchBox.Location = new System.Drawing.Point(40, 76);
+            this.SearchBox.Name = "SearchBox";
+            this.SearchBox.Size = new System.Drawing.Size(135, 20);
+            this.SearchBox.TabIndex = 4;
             // 
             // Search
             // 
@@ -90,6 +90,7 @@
             this.Search.TabIndex = 5;
             this.Search.Text = "Search";
             this.Search.UseVisualStyleBackColor = true;
+            this.Search.Click += new System.EventHandler(this.Search_Click);
             // 
             // RecipesList
             // 
@@ -97,14 +98,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Search);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.SearchBox);
             this.Controls.Add(this.Return);
             this.Controls.Add(this.Jump);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.ResultsGrid);
             this.Name = "RecipesList";
             this.Text = "RecipesList";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ResultsGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,11 +113,11 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView ResultsGrid;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Jump;
         private System.Windows.Forms.Button Return;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox SearchBox;
         private System.Windows.Forms.Button Search;
     }
 }

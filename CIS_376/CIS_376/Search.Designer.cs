@@ -40,7 +40,7 @@
             // 
             this.SearchBox.Location = new System.Drawing.Point(63, 102);
             this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(100, 20);
+            this.SearchBox.Size = new System.Drawing.Size(155, 20);
             this.SearchBox.TabIndex = 0;
             // 
             // TitleLabel
