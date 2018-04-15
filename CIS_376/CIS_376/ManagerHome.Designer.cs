@@ -140,6 +140,7 @@
             this.RecipeButton2.TabIndex = 13;
             this.RecipeButton2.Text = "Find Custom Recipe";
             this.RecipeButton2.UseVisualStyleBackColor = true;
+            this.RecipeButton2.Click += new System.EventHandler(this.RecipeButton2_Click);
             // 
             // ManagerHome
             // 

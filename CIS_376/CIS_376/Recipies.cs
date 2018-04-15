@@ -18,6 +18,7 @@ namespace CIS_376
         public Recipies()
         {
             InitializeComponent();
+            // how to handle custom recipes
             PullRandomRecipe();
         }
 

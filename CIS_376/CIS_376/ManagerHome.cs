@@ -76,5 +76,13 @@ namespace CIS_376
             this.Close();
             //system.exit();?
         }
+
+        private void RecipeButton2_Click(object sender, EventArgs e)
+        {
+            var recipes2 = new RecipesList();
+            recipes2.Owner = this;
+            recipes2.Show();
+            this.Hide();
+        }
     }
 }
