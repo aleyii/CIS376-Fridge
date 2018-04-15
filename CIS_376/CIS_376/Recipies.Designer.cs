@@ -33,6 +33,8 @@
             this.Return = new System.Windows.Forms.Button();
             this.Directions = new System.Windows.Forms.Label();
             this.Ingedients = new System.Windows.Forms.Label();
+            this.nextButton = new System.Windows.Forms.Button();
+            this.previousButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,11 +82,33 @@
             this.Ingedients.TabIndex = 6;
             this.Ingedients.Text = "Ingredients:";
             // 
+            // nextButton
+            // 
+            this.nextButton.Location = new System.Drawing.Point(249, 385);
+            this.nextButton.Name = "nextButton";
+            this.nextButton.Size = new System.Drawing.Size(98, 23);
+            this.nextButton.TabIndex = 7;
+            this.nextButton.Text = "Next Recipe";
+            this.nextButton.UseVisualStyleBackColor = true;
+            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
+            // 
+            // previousButton
+            // 
+            this.previousButton.Location = new System.Drawing.Point(46, 385);
+            this.previousButton.Name = "previousButton";
+            this.previousButton.Size = new System.Drawing.Size(98, 23);
+            this.previousButton.TabIndex = 8;
+            this.previousButton.Text = "Previous Recipe";
+            this.previousButton.UseVisualStyleBackColor = true;
+            this.previousButton.Click += new System.EventHandler(this.previousButton_Click);
+            // 
             // Recipies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.previousButton);
+            this.Controls.Add(this.nextButton);
             this.Controls.Add(this.Ingedients);
             this.Controls.Add(this.Directions);
             this.Controls.Add(this.Return);
@@ -105,5 +129,7 @@
         private System.Windows.Forms.Button Return;
         private System.Windows.Forms.Label Directions;
         private System.Windows.Forms.Label Ingedients;
+        private System.Windows.Forms.Button nextButton;
+        private System.Windows.Forms.Button previousButton;
     }
 }

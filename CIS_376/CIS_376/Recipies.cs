@@ -27,13 +27,47 @@ namespace CIS_376
             maxID = ManagerHome.mainDatabaseReference.Recipes.Max(p => p.Recipe_ID);
             minID = ManagerHome.mainDatabaseReference.Recipes.Min(p => p.Recipe_ID);
             selection = rand.Next(minID, maxID);
-            //selection = 5;
             var recipeSelection = ManagerHome.mainDatabaseReference.Recipes.SingleOrDefault(p => p.Recipe_ID == selection);
+            publishRecipe(recipeSelection);
+        }
+
+        private void publishRecipe(Recipe recipeSelection)
+        {
+            Recipes.Text = recipeSelection.Name;
             pictureBox1.Load(recipeSelection.PictureURL);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             Directions.Text = $"Directions:\n {recipeSelection.Description}";
             ingredients = pullIngredients(recipeSelection);
             Ingedients.Text = $"Ingredients:\n {ingredients}";
+        }
+
+
+        private void nextButton_Click(object sender, EventArgs e)
+        {
+            if (selection == maxID)
+            {
+                selection = minID;
+            }
+            else
+            {
+                selection += 1;
+            }
+            var recipeSelection = ManagerHome.mainDatabaseReference.Recipes.SingleOrDefault(p => p.Recipe_ID == selection);
+            publishRecipe(recipeSelection);
+        }
+
+        private void previousButton_Click(object sender, EventArgs e)
+        {
+            if (selection == minID)
+            {
+                selection = maxID;
+            }
+            else
+            {
+                selection -= 1;
+            }
+            var recipeSelection = ManagerHome.mainDatabaseReference.Recipes.SingleOrDefault(p => p.Recipe_ID == selection);
+            publishRecipe(recipeSelection);
         }
 
         private string pullIngredients(Recipe input)
