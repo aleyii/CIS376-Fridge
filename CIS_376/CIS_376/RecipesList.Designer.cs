@@ -32,13 +32,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Jump = new System.Windows.Forms.Button();
             this.Return = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Search = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(40, 80);
+            this.dataGridView1.Location = new System.Drawing.Point(40, 121);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(472, 289);
             this.dataGridView1.TabIndex = 0;
@@ -73,11 +75,29 @@
             this.Return.UseVisualStyleBackColor = true;
             this.Return.Click += new System.EventHandler(this.Return_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(40, 76);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(135, 20);
+            this.textBox1.TabIndex = 4;
+            // 
+            // Search
+            // 
+            this.Search.Location = new System.Drawing.Point(196, 76);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(75, 23);
+            this.Search.TabIndex = 5;
+            this.Search.Text = "Search";
+            this.Search.UseVisualStyleBackColor = true;
+            // 
             // RecipesList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Search);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Return);
             this.Controls.Add(this.Jump);
             this.Controls.Add(this.label1);
@@ -96,5 +116,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Jump;
         private System.Windows.Forms.Button Return;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button Search;
     }
 }

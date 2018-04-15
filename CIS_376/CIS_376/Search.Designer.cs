@@ -76,7 +76,7 @@
             // ResultsGrid
             // 
             this.ResultsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ResultsGrid.Location = new System.Drawing.Point(25, 149);
+            this.ResultsGrid.Location = new System.Drawing.Point(63, 141);
             this.ResultsGrid.MultiSelect = false;
             this.ResultsGrid.Name = "ResultsGrid";
             this.ResultsGrid.ReadOnly = true;
