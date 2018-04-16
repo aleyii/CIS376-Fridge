@@ -47,3 +47,4 @@ C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.
 C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.Recipes.resources
 C:\Users\ahkra\Google Drive\Semester 6\CIS 376\Project\GIT\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.CustomRecipe.resources
 C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.csprojResolveAssemblyReference.cache
+C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.csproj.CopyComplete

@@ -43,15 +43,29 @@ namespace CIS_376
 
         private void PullCustomRecipe(List <string> parameters)
         {
-            //bool found = false;
+            bool found = false;
             //var recipeSelection = ManagerHome.mainDatabaseReference.IngredientsSets.sing
-            //for (int i = 0; i < parameters.Count; i++)
-            //{
+            
             string test = parameters[0];
-            var ingredientQuery = ManagerHome.mainDatabaseReference.Recipes.SingleOrDefault(p => p.IngredientsSet.Food.Food_Name == test);
-            //var recipeSelection = ManagerHome.mainDatabaseReference.Recipes.SingleOrDefault(p => p.Ingredients.Equals(ingredientQuery));
-            PublishRecipe(ingredientQuery);
-            //}
+            var ingredientQuery = ManagerHome.mainDatabaseReference.Recipes.SingleOrDefault(p => 
+            p.IngredientsSet.Food.Food_Name == test ||
+            p.IngredientsSet.Food1.Food_Name == test || 
+            p.IngredientsSet.Food2.Food_Name == test || 
+            p.IngredientsSet.Food3.Food_Name == test || 
+            p.IngredientsSet.Food4.Food_Name == test);
+            if (ingredientQuery == null)
+            {
+                MessageBox.Show("No such recipe in the database!");
+            }
+            else
+            {
+                found = true;
+            }
+            
+            if (found)
+            {
+                PublishRecipe(ingredientQuery);
+            }
         }
 
         private void PublishRecipe(Recipe recipeSelection)
