@@ -69,6 +69,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomRecipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomRecipe.Designer.cs">
+      <DependentUpon>CustomRecipe.cs</DependentUpon>
+    </Compile>
     <Compile Include="dbTest.cs" />
     <Compile Include="Food.cs" />
     <Compile Include="FridgeLayout.cs">
@@ -129,6 +135,9 @@
     <Compile Include="Search.Designer.cs">
       <DependentUpon>Search.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CustomRecipe.resx">
+      <DependentUpon>CustomRecipe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FridgeLayout.resx">
       <DependentUpon>FridgeLayout.cs</DependentUpon>
     </EmbeddedResource>
