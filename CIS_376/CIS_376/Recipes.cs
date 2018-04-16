@@ -47,9 +47,10 @@ namespace CIS_376
             //var recipeSelection = ManagerHome.mainDatabaseReference.IngredientsSets.sing
             //for (int i = 0; i < parameters.Count; i++)
             //{
-            var ingredientQuery = ManagerHome.mainDatabaseReference.IngredientsSets.SingleOrDefault(p => p.Food.Food_Name.ToString() == parameters[0]);
-            var recipeSelection = ManagerHome.mainDatabaseReference.Recipes.SingleOrDefault(p => p.Ingredients.Equals(ingredientQuery));
-            //PublishRecipe(recipeSelection);
+            string test = parameters[0];
+            var ingredientQuery = ManagerHome.mainDatabaseReference.Recipes.SingleOrDefault(p => p.IngredientsSet.Food.Food_Name == test);
+            //var recipeSelection = ManagerHome.mainDatabaseReference.Recipes.SingleOrDefault(p => p.Ingredients.Equals(ingredientQuery));
+            PublishRecipe(ingredientQuery);
             //}
         }
 

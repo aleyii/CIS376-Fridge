@@ -50,17 +50,19 @@
             // 
             // Ingedients
             // 
+            this.Ingedients.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ingedients.Location = new System.Drawing.Point(391, 70);
             this.Ingedients.Name = "Ingedients";
-            this.Ingedients.Size = new System.Drawing.Size(291, 157);
+            this.Ingedients.Size = new System.Drawing.Size(372, 56);
             this.Ingedients.TabIndex = 7;
             this.Ingedients.Text = "Ingredients:";
             // 
             // Directions
             // 
-            this.Directions.Location = new System.Drawing.Point(391, 271);
+            this.Directions.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Directions.Location = new System.Drawing.Point(391, 142);
             this.Directions.Name = "Directions";
-            this.Directions.Size = new System.Drawing.Size(291, 157);
+            this.Directions.Size = new System.Drawing.Size(372, 243);
             this.Directions.TabIndex = 8;
             this.Directions.Text = "Directions:";
             // 

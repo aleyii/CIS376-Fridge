@@ -40,7 +40,7 @@ namespace CIS_376
         private void AddButton2_Click(object sender, EventArgs e)
         {
             ListViewItem item = new ListViewItem(FoodBox2.Text);
-            if (FoodCollection.Contains(item.ToString()))
+            if (FoodCollection.Contains(FoodBox2.Text))
             {
                 MessageBox.Show("Already included!");
             }
@@ -49,8 +49,14 @@ namespace CIS_376
                 listyView.Items.Add(item);
                 FoodCollection.Add(FoodBox2.Text);
                 FoodBox2.Text = "";
-                listyView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+                resize(); // doesn't work right
             }
+        }
+
+        private void resize()
+        {
+            listyView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            listyView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
         }
 
         private void jumpToRecipe_Click(object sender, EventArgs e)

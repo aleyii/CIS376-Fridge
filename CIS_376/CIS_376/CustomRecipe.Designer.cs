@@ -79,7 +79,7 @@
             this.listyView.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listyView.Location = new System.Drawing.Point(237, 175);
             this.listyView.Name = "listyView";
-            this.listyView.Size = new System.Drawing.Size(173, 133);
+            this.listyView.Size = new System.Drawing.Size(249, 155);
             this.listyView.TabIndex = 4;
             this.listyView.UseCompatibleStateImageBehavior = false;
             // 
@@ -95,7 +95,7 @@
             // 
             // jumpToRecipe
             // 
-            this.jumpToRecipe.Location = new System.Drawing.Point(355, 342);
+            this.jumpToRecipe.Location = new System.Drawing.Point(355, 360);
             this.jumpToRecipe.Name = "jumpToRecipe";
             this.jumpToRecipe.Size = new System.Drawing.Size(131, 36);
             this.jumpToRecipe.TabIndex = 7;
