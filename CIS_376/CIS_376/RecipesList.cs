@@ -15,6 +15,7 @@ namespace CIS_376
         public RecipesList()
         {
             InitializeComponent();
+            this.CenterToScreen();
         }
 
         private void Return_Click(object sender, EventArgs e)
@@ -26,7 +27,7 @@ namespace CIS_376
         private void Jump_Click(object sender, EventArgs e)
         {
             // jump to the recipe page
-            var recipes = new Recipies();
+            var recipes = new Recipes();
             recipes.Owner = this;
             recipes.Show();
             this.Hide();

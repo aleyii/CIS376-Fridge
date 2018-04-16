@@ -15,6 +15,7 @@ namespace CIS_376
         public Inventory()
         {
             InitializeComponent();
+            this.CenterToScreen();
             FillInventoryGrid();
         }
 

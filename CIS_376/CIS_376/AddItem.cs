@@ -17,6 +17,7 @@ namespace CIS_376
         public AddItem()
         {
             InitializeComponent();
+            this.CenterToScreen();
             FillShelfComboBox();
         }
 

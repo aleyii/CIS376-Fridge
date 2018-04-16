@@ -17,6 +17,7 @@ namespace CIS_376
         public FridgeLayout()
         {
             InitializeComponent();
+            this.CenterToScreen();
         }
 
         public void FillTable()

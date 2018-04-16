@@ -18,6 +18,7 @@ namespace CIS_376
         public ManagerHome()
         {
             InitializeComponent();
+            this.CenterToScreen();
             mainDatabaseReference = new dbTest();
 
             //https://msdn.microsoft.com/en-us/library/system.windows.forms.tooltip(v=vs.110).aspx
@@ -79,7 +80,7 @@ namespace CIS_376
 
         private void RecipeButton2_Click(object sender, EventArgs e)
         {
-            var recipes2 = new RecipesList();
+            var recipes2 = new CustomRecipe();
             recipes2.Owner = this;
             recipes2.Show();
             this.Hide();

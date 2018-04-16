@@ -19,6 +19,7 @@ namespace CIS_376
         public ReminderEmail()
         {
             InitializeComponent();
+            this.CenterToScreen();
             fillComboBox();
         }
 

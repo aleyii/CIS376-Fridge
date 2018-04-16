@@ -18,6 +18,7 @@ namespace CIS_376
         public Recipes()
         {
             InitializeComponent();
+            this.CenterToScreen();
             // how to handle custom recipes
             PullRandomRecipe();
         }

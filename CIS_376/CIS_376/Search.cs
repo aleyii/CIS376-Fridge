@@ -15,6 +15,7 @@ namespace CIS_376
         public Search()
         {
             InitializeComponent();
+            this.CenterToScreen();
         }
 
         private void ReturnButton_Click(object sender, EventArgs e)

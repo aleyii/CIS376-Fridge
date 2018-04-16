@@ -117,12 +117,6 @@
     <Compile Include="RecipesList.Designer.cs">
       <DependentUpon>RecipesList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Recipies.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Recipies.Designer.cs">
-      <DependentUpon>Recipies.cs</DependentUpon>
-    </Compile>
     <Compile Include="ReminderEmail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,9 +159,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RecipesList.resx">
       <DependentUpon>RecipesList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Recipies.resx">
-      <DependentUpon>Recipies.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReminderEmail.resx">
       <DependentUpon>ReminderEmail.cs</DependentUpon>

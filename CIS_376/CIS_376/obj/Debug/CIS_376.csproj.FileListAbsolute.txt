@@ -12,7 +12,6 @@ C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.
 C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.ManagerHome.resources
 C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.AddItem.resources
 C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.Properties.Resources.resources
-C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.Recipies.resources
 C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.ReminderEmail.resources
 C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.Search.resources
 C:\Users\londo\Documents\GitHub\CIS376-Fridge\CIS_376\CIS_376\obj\Debug\CIS_376.csproj.GenerateResource.Cache
