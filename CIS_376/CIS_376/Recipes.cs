@@ -13,7 +13,8 @@ namespace CIS_376
     public partial class Recipes : Form
     {
         int minID, maxID, selection, currentMode; //1 = random mode, 2 = custom mode
-        string ingredients; 
+        string ingredients;
+        string currentRecipePublished = "";
 
         public Recipes()
         {
@@ -44,15 +45,13 @@ namespace CIS_376
         private void PullCustomRecipe(List <string> parameters)
         {
             bool found = false;
-            //var recipeSelection = ManagerHome.mainDatabaseReference.IngredientsSets.sing
-            
             string test = parameters[0];
-            var ingredientQuery = ManagerHome.mainDatabaseReference.Recipes.SingleOrDefault(p => 
-            p.IngredientsSet.Food.Food_Name == test ||
-            p.IngredientsSet.Food1.Food_Name == test || 
-            p.IngredientsSet.Food2.Food_Name == test || 
-            p.IngredientsSet.Food3.Food_Name == test || 
-            p.IngredientsSet.Food4.Food_Name == test);
+            var ingredientQuery = ManagerHome.mainDatabaseReference.Recipes.SingleOrDefault(p =>
+            (p.IngredientsSet.Food.Food_Name == test) ||
+            (p.IngredientsSet.Food1.Food_Name == test) ||
+            (p.IngredientsSet.Food2.Food_Name == test) ||
+            (p.IngredientsSet.Food3.Food_Name == test) ||
+            (p.IngredientsSet.Food4.Food_Name == test));
             if (ingredientQuery == null)
             {
                 MessageBox.Show("No such recipe in the database!");
@@ -61,10 +60,16 @@ namespace CIS_376
             {
                 found = true;
             }
-            
+
             if (found)
             {
                 PublishRecipe(ingredientQuery);
+                currentRecipePublished = ingredientQuery.Name.ToString();
+            }
+            else
+            {
+                //Return.PerformClick();
+                //this.Close();
             }
         }
 
@@ -81,30 +86,44 @@ namespace CIS_376
         
         private void nextButton_Click_1(object sender, EventArgs e)
         {
-            if (selection == maxID)
+            if (currentMode == 1)
             {
-                selection = minID;
+                if (selection == maxID)
+                {
+                    selection = minID;
+                }
+                else
+                {
+                    selection += 1;
+                }
+                var recipeSelection = ManagerHome.mainDatabaseReference.Recipes.SingleOrDefault(p => p.Recipe_ID == selection);
+                PublishRecipe(recipeSelection);
             }
             else
             {
-                selection += 1;
+
             }
-            var recipeSelection = ManagerHome.mainDatabaseReference.Recipes.SingleOrDefault(p => p.Recipe_ID == selection);
-            PublishRecipe(recipeSelection);
         }
 
         private void previousButton_Click_1(object sender, EventArgs e)
         {
-            if (selection == minID)
+            if (currentMode == 1)
             {
-                selection = maxID;
+                if (selection == minID)
+                {
+                    selection = maxID;
+                }
+                else
+                {
+                    selection -= 1;
+                }
+                var recipeSelection = ManagerHome.mainDatabaseReference.Recipes.SingleOrDefault(p => p.Recipe_ID == selection);
+                PublishRecipe(recipeSelection);
             }
             else
             {
-                selection -= 1;
+
             }
-            var recipeSelection = ManagerHome.mainDatabaseReference.Recipes.SingleOrDefault(p => p.Recipe_ID == selection);
-            PublishRecipe(recipeSelection);
         }
 
         private void Return_Click_1(object sender, EventArgs e)

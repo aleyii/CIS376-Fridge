@@ -13,6 +13,8 @@ namespace CIS_376
     public partial class CustomRecipe : Form
     {
         List<string> FoodCollection = new List<string>();
+        static int QUERY_LIMIT = 2;
+        int amountQueries = 0;
         public CustomRecipe()
         {
             InitializeComponent();
@@ -34,15 +36,20 @@ namespace CIS_376
         private void ReturnButton_Click(object sender, EventArgs e)
         {
             this.Owner.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void AddButton2_Click(object sender, EventArgs e)
         {
             ListViewItem item = new ListViewItem(FoodBox2.Text);
+
             if (FoodCollection.Contains(FoodBox2.Text))
             {
                 MessageBox.Show("Already included!");
+            }
+            else if(amountQueries > QUERY_LIMIT)
+            {
+                MessageBox.Show("No more than two ingredients, please");
             }
             else
             {
