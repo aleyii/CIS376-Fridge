@@ -99,6 +99,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recipe.cs" />
+    <Compile Include="Recipes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recipes.Designer.cs">
+      <DependentUpon>Recipes.cs</DependentUpon>
+    </Compile>
     <Compile Include="RecipesList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Recipes.resx">
+      <DependentUpon>Recipes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RecipesList.resx">
       <DependentUpon>RecipesList.cs</DependentUpon>
     </EmbeddedResource>

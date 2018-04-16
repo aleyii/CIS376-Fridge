@@ -49,7 +49,7 @@ namespace CIS_376
 
         private void RecipeButton_Click(object sender, EventArgs e)
         {
-            var recipes = new Recipies();
+            var recipes = new Recipes();
             recipes.Owner = this;
             recipes.Show();
             this.Hide();
