@@ -73,6 +73,7 @@ namespace CIS_376
             recipes.Show();
             this.Hide();
             FoodCollection.Clear();
+            listyView.Clear();
         }
     }
 }

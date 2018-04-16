@@ -12,9 +12,10 @@ namespace CIS_376
 {
     public partial class Recipes : Form
     {
-        int minID, maxID, selection, currentMode; //1 = random mode, 2 = custom mode
-        string ingredients;
+        int minID, maxID, selection, timesSkipped, currentMode; //1 = random mode, 2 = custom mode
+        string ingredients, test;
         string currentRecipePublished = "";
+        List<string> mainParameters = new List<string>();
 
         public Recipes()
         {
@@ -30,6 +31,7 @@ namespace CIS_376
             this.CenterToScreen();
             PullCustomRecipe(customIngredients);
             currentMode = 2;
+            previousButton.Visible = false;
         }
 
         private void PullRandomRecipe()
@@ -45,13 +47,16 @@ namespace CIS_376
         private void PullCustomRecipe(List <string> parameters)
         {
             bool found = false;
-            string test = parameters[0];
-            var ingredientQuery = ManagerHome.mainDatabaseReference.Recipes.SingleOrDefault(p =>
-            (p.IngredientsSet.Food.Food_Name == test) ||
-            (p.IngredientsSet.Food1.Food_Name == test) ||
-            (p.IngredientsSet.Food2.Food_Name == test) ||
-            (p.IngredientsSet.Food3.Food_Name == test) ||
-            (p.IngredientsSet.Food4.Food_Name == test));
+            mainParameters = parameters;
+            test = parameters[0];
+            timesSkipped = 0;
+
+            var ingredientQuery = ManagerHome.mainDatabaseReference.Recipes.FirstOrDefault(p =>
+            p.IngredientsSet.Food.Food_Name == test ||
+            p.IngredientsSet.Food1.Food_Name == test ||
+            p.IngredientsSet.Food2.Food_Name == test ||
+            p.IngredientsSet.Food3.Food_Name == test ||
+            p.IngredientsSet.Food4.Food_Name == test);
             if (ingredientQuery == null)
             {
                 MessageBox.Show("No such recipe in the database!");
@@ -68,8 +73,38 @@ namespace CIS_376
             }
             else
             {
-                //Return.PerformClick();
-                //this.Close();
+                this.Return.PerformClick();
+            }
+        }
+
+        private void PullCustomRecipe(int timesSkipped)
+        {
+            bool found = false;
+            
+            var ingredientQuery = ManagerHome.mainDatabaseReference.Recipes.OrderBy(o => o.Recipe_ID).Skip(timesSkipped).FirstOrDefault(p =>
+            p.IngredientsSet.Food.Food_Name == test ||
+            p.IngredientsSet.Food1.Food_Name == test ||
+            p.IngredientsSet.Food2.Food_Name == test ||
+            p.IngredientsSet.Food3.Food_Name == test ||
+            p.IngredientsSet.Food4.Food_Name == test);
+            if (ingredientQuery == null)
+            {
+                MessageBox.Show("No such recipe in the database!");
+            }
+            else if (ingredientQuery.Name == currentRecipePublished)
+            {
+                MessageBox.Show("Last of recipes!");
+                Return.PerformClick();
+            }
+            else
+            {
+                found = true;
+            }
+
+            if (found)
+            {
+                PublishRecipe(ingredientQuery);
+                currentRecipePublished = ingredientQuery.Name.ToString();
             }
         }
 
@@ -101,7 +136,8 @@ namespace CIS_376
             }
             else
             {
-
+                timesSkipped += 1;
+                PullCustomRecipe(timesSkipped);
             }
         }
 
@@ -122,7 +158,8 @@ namespace CIS_376
             }
             else
             {
-
+                timesSkipped += 1;
+                PullCustomRecipe(timesSkipped);
             }
         }
 
