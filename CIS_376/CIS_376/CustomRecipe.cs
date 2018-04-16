@@ -12,7 +12,7 @@ namespace CIS_376
 {
     public partial class CustomRecipe : Form
     {
-        List<String> FoodCollection = new List<string>();
+        List<string> FoodCollection = new List<string>();
         public CustomRecipe()
         {
             InitializeComponent();
@@ -47,10 +47,19 @@ namespace CIS_376
             else
             {
                 listyView.Items.Add(item);
-                FoodCollection.Add(item.ToString());
+                FoodCollection.Add(FoodBox2.Text);
                 FoodBox2.Text = "";
                 listyView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
             }
+        }
+
+        private void jumpToRecipe_Click(object sender, EventArgs e)
+        {
+            var recipes = new Recipes(FoodCollection);
+            recipes.Owner = this;
+            recipes.Show();
+            this.Hide();
+            FoodCollection.Clear();
         }
     }
 }

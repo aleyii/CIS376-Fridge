@@ -34,6 +34,7 @@
             this.AddButton2 = new System.Windows.Forms.Button();
             this.listyView = new System.Windows.Forms.ListView();
             this.ReturnButton2 = new System.Windows.Forms.Button();
+            this.jumpToRecipe = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // FoodBox2
@@ -92,11 +93,22 @@
             this.ReturnButton2.UseVisualStyleBackColor = true;
             this.ReturnButton2.Click += new System.EventHandler(this.ReturnButton_Click);
             // 
+            // jumpToRecipe
+            // 
+            this.jumpToRecipe.Location = new System.Drawing.Point(355, 342);
+            this.jumpToRecipe.Name = "jumpToRecipe";
+            this.jumpToRecipe.Size = new System.Drawing.Size(131, 36);
+            this.jumpToRecipe.TabIndex = 7;
+            this.jumpToRecipe.Text = "Find recipe with these ingredients";
+            this.jumpToRecipe.UseVisualStyleBackColor = true;
+            this.jumpToRecipe.Click += new System.EventHandler(this.jumpToRecipe_Click);
+            // 
             // CustomRecipe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(532, 450);
+            this.Controls.Add(this.jumpToRecipe);
             this.Controls.Add(this.ReturnButton2);
             this.Controls.Add(this.listyView);
             this.Controls.Add(this.AddButton2);
@@ -118,5 +130,6 @@
         private System.Windows.Forms.Button AddButton2;
         private System.Windows.Forms.ListView listyView;
         private System.Windows.Forms.Button ReturnButton2;
+        private System.Windows.Forms.Button jumpToRecipe;
     }
 }

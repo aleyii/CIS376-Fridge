@@ -12,15 +12,23 @@ namespace CIS_376
 {
     public partial class Recipes : Form
     {
-        int minID, maxID, selection;
-        string ingredients;
+        int minID, maxID, selection, currentMode; //1 = random mode, 2 = custom mode
+        string ingredients; 
 
         public Recipes()
         {
             InitializeComponent();
             this.CenterToScreen();
-            // how to handle custom recipes
             PullRandomRecipe();
+            currentMode = 1;
+        }
+
+        public Recipes(List<string> customIngredients)
+        {
+            InitializeComponent();
+            this.CenterToScreen();
+            PullCustomRecipe(customIngredients);
+            currentMode = 2;
         }
 
         private void PullRandomRecipe()
@@ -30,10 +38,22 @@ namespace CIS_376
             minID = ManagerHome.mainDatabaseReference.Recipes.Min(p => p.Recipe_ID);
             selection = rand.Next(minID, maxID);
             var recipeSelection = ManagerHome.mainDatabaseReference.Recipes.SingleOrDefault(p => p.Recipe_ID == selection);
-            publishRecipe(recipeSelection);
+            PublishRecipe(recipeSelection);
         }
 
-        private void publishRecipe(Recipe recipeSelection)
+        private void PullCustomRecipe(List <string> parameters)
+        {
+            //bool found = false;
+            //var recipeSelection = ManagerHome.mainDatabaseReference.IngredientsSets.sing
+            //for (int i = 0; i < parameters.Count; i++)
+            //{
+            var ingredientQuery = ManagerHome.mainDatabaseReference.IngredientsSets.SingleOrDefault(p => p.Food.Food_Name.ToString() == parameters[0]);
+            var recipeSelection = ManagerHome.mainDatabaseReference.Recipes.SingleOrDefault(p => p.Ingredients.Equals(ingredientQuery));
+            //PublishRecipe(recipeSelection);
+            //}
+        }
+
+        private void PublishRecipe(Recipe recipeSelection)
         {
             Recipe.Text = recipeSelection.Name;
             pictureBox1.Load(recipeSelection.PictureURL);
@@ -44,7 +64,6 @@ namespace CIS_376
         }
 
         
-
         private void nextButton_Click_1(object sender, EventArgs e)
         {
             if (selection == maxID)
@@ -56,7 +75,7 @@ namespace CIS_376
                 selection += 1;
             }
             var recipeSelection = ManagerHome.mainDatabaseReference.Recipes.SingleOrDefault(p => p.Recipe_ID == selection);
-            publishRecipe(recipeSelection);
+            PublishRecipe(recipeSelection);
         }
 
         private void previousButton_Click_1(object sender, EventArgs e)
@@ -70,7 +89,7 @@ namespace CIS_376
                 selection -= 1;
             }
             var recipeSelection = ManagerHome.mainDatabaseReference.Recipes.SingleOrDefault(p => p.Recipe_ID == selection);
-            publishRecipe(recipeSelection);
+            PublishRecipe(recipeSelection);
         }
 
         private void Return_Click_1(object sender, EventArgs e)
