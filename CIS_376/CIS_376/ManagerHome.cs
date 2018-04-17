@@ -1,16 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 
 namespace CIS_376
 {
-    
     public partial class ManagerHome : Form
     {
         public static dbTest mainDatabaseReference;
@@ -58,7 +50,7 @@ namespace CIS_376
 
         private void ViewInventoryButton_Click(object sender, EventArgs e)
         {
-            var inventory = new Inventory(); // type var?-Aley
+            var inventory = new Inventory();
             inventory.Owner = this;
             inventory.Show();
             this.Hide();
@@ -75,7 +67,6 @@ namespace CIS_376
         private void QuitButton_Click(object sender, EventArgs e)
         {
             this.Close();
-            //system.exit();?
         }
 
         private void RecipeButton2_Click(object sender, EventArgs e)

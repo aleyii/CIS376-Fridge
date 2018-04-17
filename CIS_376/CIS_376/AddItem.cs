@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CIS_376
@@ -76,9 +71,7 @@ namespace CIS_376
                     food.Exp_Date = expDate;
                     ManagerHome.mainDatabaseReference.Foods.Add(food);
                 }
-#pragma warning disable CS0168 // Variable is declared but never used
                 catch (Exception exc)
-#pragma warning restore CS0168 // Variable is declared but never used
                 {
                     ManagerHome.mainDatabaseReference.Foods.Remove(food);
                     MessageBox.Show("Failed to add new food");
@@ -88,9 +81,7 @@ namespace CIS_376
                 {
                     ManagerHome.mainDatabaseReference.SaveChanges();
                 }
-#pragma warning disable CS0168 // Variable is declared but never used
                 catch (Exception exc)
-#pragma warning disable CS0168 // Variable is declared but never used
                 {
                     MessageBox.Show("Unable to save changes");
                 }
@@ -111,7 +102,7 @@ namespace CIS_376
         {
             for (int i = 0; i < SHELF_LIMIT; i++)
             {
-                ShelfComboBox.Items.Add(i + 1);                     // ascii mona lisa.jpg
+                ShelfComboBox.Items.Add(i + 1); // ascii mona lisa.jpg
             }
         }
     }

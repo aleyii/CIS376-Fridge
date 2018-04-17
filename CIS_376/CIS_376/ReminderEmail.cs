@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.Mail;
 
@@ -58,9 +53,7 @@ namespace CIS_376
                 sendEmail();
             }
             else if (dialogResult == DialogResult.No)
-            {
-                //do nothing
-            }
+            {}
         }
 
         private void fillComboBox()
@@ -79,10 +72,8 @@ namespace CIS_376
             bool idFound = false;
             try
             {
-                //MailAddress emailID = new MailAddress(EmailAddressBox.Text);
                 emailID = new MailAddress(EmailAddressBox.Text);
                 idFound = true;
-
             }
             catch (FormatException)
             {

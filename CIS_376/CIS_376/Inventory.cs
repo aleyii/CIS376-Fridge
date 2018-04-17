@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CIS_376
@@ -80,9 +75,7 @@ namespace CIS_376
                     MessageBox.Show("Food was not removed");
                 }
             }
-#pragma warning disable CS0168 // Variable is declared but never used
             catch (Exception exc)
-#pragma warning restore CS0168 // Variable is declared but never used
             {
                 MessageBox.Show("Could not remove");
             }

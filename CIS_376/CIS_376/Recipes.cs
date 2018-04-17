@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CIS_376
@@ -80,7 +76,6 @@ namespace CIS_376
         private void PullCustomRecipe(int timesSkipped)
         {
             bool found = false;
-            
             var ingredientQuery = ManagerHome.mainDatabaseReference.Recipes.OrderBy(o => o.Recipe_ID).Skip(timesSkipped).FirstOrDefault(p =>
             p.IngredientsSet.Food.Food_Name == test ||
             p.IngredientsSet.Food1.Food_Name == test ||
@@ -118,7 +113,6 @@ namespace CIS_376
             Ingedients.Text = $"Ingredients:\n {ingredients}";
         }
 
-        
         private void nextButton_Click_1(object sender, EventArgs e)
         {
             if (currentMode == 1)
@@ -177,7 +171,5 @@ namespace CIS_376
                 (input.IngredientsSet.Food3.Food_Name.ToString()) + ", " +
                 (input.IngredientsSet.Food4.Food_Name.ToString());
         }
-
-      
     }
 }
